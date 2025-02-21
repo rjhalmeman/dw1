@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <style>
         /* Seletor Universal (*) - afeta todos os elementos */
@@ -14,6 +15,14 @@
             font-family: Arial, sans-serif;
             line-height: 1.6;
             margin-bottom: 10px;
+            background-color: aquamarine;
+        }
+
+        label {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin-bottom: 10px;
+            background-color: rgb(255, 0, 255);
         }
 
         /* Seletor de Classe - afeta elementos com a classe "destaque" */
@@ -32,12 +41,15 @@
         }
     </style>
 </head>
+
 <body>
     <!-- Exemplo do seletor de ID -->
     <h1 id="titulo-principal">Bem-vindo ao nosso site</h1>
 
     <!-- Exemplo do seletor de elemento -->
     <p>Este é um parágrafo normal que será afetado pelo seletor de elemento.</p>
+    <label for="inputUm">Digite algo</label>
+    <input type="text" name="inputUm" id="inputUm">
 
     <!-- Exemplo do seletor de classe -->
     <p class="destaque">Este é um parágrafo destacado usando o seletor de classe.</p>
@@ -50,4 +62,5 @@
         Esta é uma div que também usa a classe destaque.
     </div>
 </body>
+
 </html>
