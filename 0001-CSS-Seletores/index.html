@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* Seletor Universal (*) - afeta todos os elementos */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Seletor de Elemento - afeta todos os parágrafos */
+        p {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        /* Seletor de Classe - afeta elementos com a classe "destaque" */
+        .destaque {
+            background-color: yellow;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        /* Seletor de ID - afeta o elemento com ID "titulo-principal" */
+        #titulo-principal {
+            color: navy;
+            font-size: 24px;
+            text-align: center;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Exemplo do seletor de ID -->
+    <h1 id="titulo-principal">Bem-vindo ao nosso site</h1>
+
+    <!-- Exemplo do seletor de elemento -->
+    <p>Este é um parágrafo normal que será afetado pelo seletor de elemento.</p>
+
+    <!-- Exemplo do seletor de classe -->
+    <p class="destaque">Este é um parágrafo destacado usando o seletor de classe.</p>
+
+    <!-- Outro parágrafo normal -->
+    <p>Mais um parágrafo normal para demonstração.</p>
+
+    <!-- Outro elemento com a mesma classe -->
+    <div class="destaque">
+        Esta é uma div que também usa a classe destaque.
+    </div>
+</body>
+</html>
