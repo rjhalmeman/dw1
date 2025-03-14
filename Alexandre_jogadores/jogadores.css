@@ -1,0 +1,165 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0, 0, 5px, 0;
+    text-align: center;
+}    
+
+#formulario {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 39%;
+    height: 100vh; /* Ajustado para ocupar toda a tela */
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    overflow-y: auto; /* Caso o conteúdo exceda o tamanho */
+}
+
+#formulario h1 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 35px;
+}
+
+#formulario label {
+    font-weight: bold;
+    margin-top: 5px;
+    color: #333;
+    font-size: 20px;
+}
+
+#formulario input[type="date"],select {
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+#formulario input[type="number"], input[type="text"] {
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+#formulario input[type="button"] {
+    padding: 10px;
+    background-color: #ffffff;
+    color: black;
+    border: solid 1px #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#formulario input[type="button"]:hover {
+    background-color: #ccc;
+}
+
+#formulario input[type="button"]:active {
+    background-color: #ccc;
+}
+
+#divAviso {
+    background-color: #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    width: 80%;
+    margin: 20px auto;
+}
+
+#tabela {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 60%;
+    background-color: white;
+    border-radius: 5px;
+    border-collapse: collapse;
+}
+
+#tabela h1 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 35px;
+}
+
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    font-size: 16px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Regras de responsividade */
+@media (max-width: 900px) {
+    #formulario {
+        position: relative;
+        width: 100%;
+        height: auto;
+        }
+
+    #tabela {
+        position: relative;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    #tabela h1 {
+        font-size: 24px;
+    }
+
+    table {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+
+    #formulario h1 {
+        font-size: 24px;
+    }
+
+    #formulario label {
+        font-size: 16px;
+    }
+
+    #formulario input[type="button"],
+    input[type="number"],
+    input[type="text"],
+    select {
+        font-size: 14px;
+    }
+
+    table th, table td {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    table {
+        font-size: 12px;
+    }
+}
