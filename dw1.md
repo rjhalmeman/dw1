@@ -4,7 +4,7 @@
 ## Desenvolvimento WEB
 
 
-```bash
+
 # O que é Desenvolvimento Web?
 
 Desenvolvimento web é o processo de criação e manutenção de sites e aplicações na internet. Envolve várias etapas, como o planejamento, o design, a programação e a implementação de funcionalidades. O desenvolvimento web pode ser dividido em duas áreas principais:
@@ -26,10 +26,10 @@ O desenvolvimento web pode ser voltado para a criação de **sites estáticos** 
 Além disso, o desenvolvimento de aplicações web também pode envolver o uso de **APIs** (interfaces de programação de aplicativos), que permitem a comunicação entre diferentes sistemas.
 
 É uma área essencial para a criação de experiências digitais na web, seja para sites pessoais, blogs, redes sociais, e-commerce ou aplicações corporativas.
-```
+
 
 ## MVC
-```bash
+
 # Arquitetura MVC no Desenvolvimento Web
 
 A arquitetura **MVC** (Model-View-Controller) é um padrão de design utilizado para organizar o código em aplicações, especialmente no desenvolvimento web. O objetivo do MVC é separar a lógica de negócios, a interface de usuário e o controle de fluxo de dados, promovendo um código mais modular, fácil de manter e escalar.
@@ -79,7 +79,6 @@ Imagine uma aplicação de blog:
 
 A arquitetura **MVC** é amplamente utilizada no desenvolvimento web devido à sua capacidade de organizar e estruturar o código de forma eficiente, tornando-o mais modular, flexível e fácil de manter. Ela promove uma separação clara entre a interface do usuário, a lógica de negócios e a manipulação de dados, tornando a aplicação mais escalável e testável.
 
-```
 
 ## HTML
 
