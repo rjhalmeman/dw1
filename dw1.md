@@ -1,9 +1,5 @@
 # DW1 - Desenvolvimento WEB 1 
 ---
-## Desenvolvimento WEB
-
-
-
 # O que é Desenvolvimento Web?
 
 Desenvolvimento web é o processo de criação e manutenção de sites e aplicações na internet. Envolve várias etapas, como o planejamento, o design, a programação e a implementação de funcionalidades. O desenvolvimento web pode ser dividido em duas áreas principais:
@@ -74,12 +70,20 @@ Imagine uma aplicação de blog:
 - **View**: A página HTML que exibe os posts, formulários de edição, etc.
 - **Controller**: A lógica que recebe as ações do usuário (como salvar uma postagem ou editar um post) e interage com o Model para atualizar a View.
 
-## Conclusão
 
 A arquitetura **MVC** é amplamente utilizada no desenvolvimento web devido à sua capacidade de organizar e estruturar o código de forma eficiente, tornando-o mais modular, flexível e fácil de manter. Ela promove uma separação clara entre a interface do usuário, a lógica de negócios e a manipulação de dados, tornando a aplicação mais escalável e testável.
 
+## Linguagens de marcação
+### Markdown
 
-## HTML
+Markdown é uma linguagem de marcação leve usada para formatar texto de forma simples e legível. Ele permite criar títulos, listas, links, imagens e trechos de código de maneira intuitiva. Muito utilizado em documentação, README de projetos e blogs, pode ser convertido para HTML facilmente. Seu uso é popular em plataformas como GitHub, Stack Overflow e Notion.  
+
+### HTML
+# O que é HTML?
+
+HTML (HyperText Markup Language) é a linguagem de marcação usada para estruturar páginas da web. Ele define elementos como títulos, parágrafos, links, imagens e outros conteúdos, organizando a informação para ser exibida nos navegadores. Junto com CSS e JavaScript, HTML é essencial para o desenvolvimento web.
+
+### XML
 
 ## CSS
 
