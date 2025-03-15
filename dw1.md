@@ -22,6 +22,7 @@ Além disso, o desenvolvimento de aplicações web também pode envolver o uso d
 
 É uma área essencial para a criação de experiências digitais na web, seja para sites pessoais, blogs, redes sociais, e-commerce ou aplicações corporativas.
 
+![alt text](image-1.png)
 
 ## MVC
 
@@ -72,8 +73,12 @@ Imagine uma aplicação de blog:
 
 
 A arquitetura **MVC** é amplamente utilizada no desenvolvimento web devido à sua capacidade de organizar e estruturar o código de forma eficiente, tornando-o mais modular, flexível e fácil de manter. Ela promove uma separação clara entre a interface do usuário, a lógica de negócios e a manipulação de dados, tornando a aplicação mais escalável e testável.
+---
+# Linguagens
 
-# Linguagens de Marcação
+![alt text](image.png)
+
+## Linguagens de Marcação
 
 ### HTML
 

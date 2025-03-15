@@ -1,0 +1,66 @@
+
+body {
+    font-family:Times, serif;
+    text-align: center;
+    background-color: cadetblue;
+    color: rgb(78, 78, 78);
+  }
+  
+  .avaliacaoPorEstrelinhas {
+    display: inline-block;
+  }
+   
+  .estrela {
+    font-size: 40px;
+    color: gray;
+    cursor: pointer;
+    transition: color 0.2s;
+  }
+  
+  .estrela.coloridinha {
+    color: darkcyan;
+  }
+
+  .titulo {
+    color: darkslategray;
+    text-align: center;
+    font-family: 'Times New Roman', serif;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+
+  .caixinha {
+    display: flex;
+    min-height: 100vh;
+  }
+
+  .lado-esquerdo {
+    flex: 1;
+    margin: 20px;
+    padding: 20px;
+    background-color: rgb(218, 209, 195);
+    border-radius: 8px;
+    max-height: fit-content;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+
+  .inserir {
+    border-radius: 5px;
+    border: 1px solid darkslategray;
+    background-color: rgb(182, 205, 205);
+    color: rgb(94, 94, 94);
+  }
+
+  .botao {
+    border-radius: 5px;
+    border: 1px solid darkslategray;
+    background-color: rgb(157, 181, 181);
+    color: rgb(71, 71, 71);
+  }
+
+  .lado-direito {
+    flex: 1;
+    margin: 20px;
+    background-color: rgb(232, 225, 213);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }

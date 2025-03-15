@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Livro</title>
+    <link rel="stylesheet" href="Livro.css">
+</head>
+<body>
+    <h1 class="titulo">Diário de leituras</h1>
+    <div class="caixinha">
+        <div class="lado-esquerdo">
+            <label for="inputId">Insira o ID do livro:</label>
+            <input type="number" name="inputId" id="inputId" class="inserir">
+            <input type="button" value="Procure" id="btProcure" class="botao" onclick="procure()" style="display:inline">
+            <input type="button" value="Inserir" id="btInserir" class="botao" onclick="inserir()" style="display:none">
+            <input type="button" value="Alterar"id="btAlterar" class="botao" onclick="alterar()" style="display:none">
+            <input type="button" value="Excluir" id="btExcluir" class="botao" onclick="excluir()" style="display:none">
+            <br><br>
+            <label for="inputNome">Insira o nome do livro:</label>
+            <input type="text" name="inputNome" id="inputNome" class="inserir">
+            <br><br>
+            <label for="inputAutor">Insira o nome do autor:</label>
+            <input type="text" name="inputAutor" id="inputAutor" class="inserir">
+            <br><br>
+            <label for="inputGenero">Insira o gênero do livro:</label>
+            <input type="text" name="inputGenero" id="inputGenero" class="inserir">
+            <br><br>
+            <label for="inputEditora">Insira a editora dessa edição:</label>
+            <input type="text" name="inputEditora" id="inputEditora" class="inserir">
+            <br><br>
+            <label for="inputPaginas">Insira a quantidade de páginas do livro:</label>
+            <input type="number" name="inputPaginas" id="inputPaginas" class="inserir">
+            <br><br>
+            <label for="inputDataDeLancamento">Insira a data de lançamento do livro:</label>
+            <input type="date" name="inputDataDeLancamento" id="inputDataDeLancamento" class="inserir">
+            <br><br>
+            <label for="inputAnoDeLeitura">Insira o ano em que você leu esse livro:</label>
+            <input type="number" name="inputAnoDeLeitura" id="inputAnoDeLeitura" class="inserir">
+            <br><br>
+            <label for="inputAvaliacao">Insira sua avaliacao do livro:</label> 
+            <div class="avaliacaoPorEstrelinhas">
+                <span class="estrela" data-value="1">&#9733;</span>
+                <span class="estrela" data-value="2">&#9733;</span>
+                <span class="estrela" data-value="3">&#9733;</span>
+                <span class="estrela" data-value="4">&#9733;</span>
+                <span class="estrela" data-value="5">&#9733;</span>
+            </div>
+            <br><br>
+
+            <div id="divAviso"></div>
+            <br>
+            <input type="button" value="Salvar" id="btSalvar" class="botao" onclick="salvar()" style="display: none;">
+            <input type="button" value="Cancelar" id="btCancelar" class="botao" onclick="cancelarOperacao()" style="display:none">
+            <br><br>
+            <input type="button" value="Salvar Dados na Memória RAM" class="botao" onclick="prepararESalvarCSV()">
+            <input type="button" value="Buscar Dados Salvos na Memória RAM" class="botao" onclick="abrirArquivoSalvoEmLocalPermanente()">
+            <br><br>
+        </div>
+
+        <div class="lado-direito">
+            <h2 class="titulo">Lista de Livros</h2>
+            <div id="outputSaida"></div>
+        </div>
+    </div>
+
+    <script src="Livro.js"></script>
+    <script src="LivroControle.js"></script>
+</body>
+</html>
