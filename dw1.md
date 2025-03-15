@@ -73,7 +73,7 @@ Imagine uma aplicação de blog:
 
 A arquitetura **MVC** é amplamente utilizada no desenvolvimento web devido à sua capacidade de organizar e estruturar o código de forma eficiente, tornando-o mais modular, flexível e fácil de manter. Ela promove uma separação clara entre a interface do usuário, a lógica de negócios e a manipulação de dados, tornando a aplicação mais escalável e testável.
 
-## Linguagens
+# Linguagens de Marcação
 
 ### HTML
 
@@ -87,11 +87,16 @@ XML (eXtensible Markup Language) é uma **linguagem de marcação** usada para e
 
 Markdown é uma **linguagem de marcação** leve usada para formatar texto de forma simples e legível. Ele permite criar títulos, listas, links, imagens e trechos de código de maneira intuitiva. Muito utilizado em documentação, README de projetos e blogs, pode ser convertido para HTML facilmente. Seu uso é popular em plataformas como GitHub, Stack Overflow e Notion.  
 
+
+# Linguagens de Estilo
 ### CSS
 
-CSS (Cascading Style Sheets) é uma **linguagem de estilo** usada para definir a aparência de páginas HTML. Ela permite personalizar cores, fontes, layouts e animações, tornando o design mais atraente e responsivo. Com seletores e propriedades, é possível aplicar estilos a elementos específicos ou a toda a página. Ferramentas como Flexbox e Grid facilitam a criação de layouts modernos e adaptáveis a diferentes telas.  
+CSS (Cascading Style Sheets) é uma **linguagem de estilo** usada para definir a aparência de páginas HTML. Ela permite personalizar cores, fontes, layouts e animações, tornando o design mais atraente e responsivo. Com seletores e propriedades, é possível aplicar estilos a elementos específicos ou a toda a página. Ferramentas como Flexbox e Grid facilitam a criação de layouts modernos e adaptáveis a diferentes telas.
 
-## Linguagem de Programação e Linguagem de Script  
+### Tailwind CSS
+Embora seja um framework CSS, o Tailwind CSS utiliza um modelo utilitário, onde você aplica classes de estilo diretamente aos elementos no HTML. Em vez de escrever um CSS separado, você compõe os estilos usando classes predefinidas, o que torna o desenvolvimento rápido e modular.
+
+# Linguagem de Programação e Linguagem de Script  
 
 Uma **linguagem de programação** e uma **linguagem de script** diferem na forma como são executadas e no propósito para o qual foram projetadas  
 
@@ -116,6 +121,9 @@ C++ é uma **linguagem de programação** baseada em C, que adiciona suporte à 
 
 JavaScript (JS) é uma **linguagem de script** amplamente utilizada para tornar páginas web interativas e dinâmicas. Executado no navegador, permite manipular o HTML e CSS, responder a eventos e realizar requisições assíncronas. Com a evolução do Node.js, também pode ser usado no backend para criar servidores e aplicações escaláveis. Atualmente, frameworks como React, Angular e Vue.js tornam o desenvolvimento web mais eficiente e modular.
 
+### TypeScript 
+TypeScript é uma versão melhorada do JavaScript que adiciona tipos. Foi criado pela Microsoft para ajudar a encontrar erros mais cedo no desenvolvimento. O código TypeScript se transforma em JavaScript normal quando executado, então funciona em qualquer lugar que o JavaScript funcione. Usar tipos torna mais fácil entender o código, fazer mudanças e trabalhar em equipe. O TypeScript tem ferramentas como interfaces e classes que ajudam a organizar melhor o código. É muito usado tanto para criar sites (frontend) quanto para servidores (backend), especialmente com frameworks como Angular e React.
+
 ### Python
 Python é uma **linguagem de script** de alto nível, conhecida por sua simplicidade e legibilidade. Utilizada em diversas áreas como inteligência artificial, automação, análise de dados e desenvolvimento web. Possui uma sintaxe intuitiva e uma vasta quantidade de bibliotecas. Seu uso cresce em ciência de dados, aprendizado de máquina e desenvolvimento backend.  
 
@@ -125,7 +133,9 @@ PHP é uma **linguagem de script** voltada para desenvolvimento web, permitindo 
 ### Ruby  
 Ruby é uma **linguagem de script** dinâmica e interpretada, focada na simplicidade e produtividade. Muito utilizada no desenvolvimento web, especialmente com o framework Ruby on Rails, oferece uma sintaxe elegante e expressiva. Sua filosofia prioriza a legibilidade do código e a experiência do programador, tornando-a popular entre startups e projetos ágeis.  
 
-## Framework  
+--- 
+
+# Framework  
 
 Um **framework** é um conjunto de ferramentas, bibliotecas e regras que facilita o desenvolvimento de software, fornecendo uma estrutura pré-definida. Ele permite que os desenvolvedores foquem na lógica do aplicativo sem precisar reimplementar funcionalidades básicas.  
 
@@ -155,5 +165,44 @@ TensorFlow é um **framework de Machine Learning** desenvolvido pelo Google para
 ### PyTorch  
 PyTorch é um **framework de Machine Learning** desenvolvido pelo Facebook, amplamente utilizado em pesquisa e desenvolvimento de IA. Ele oferece uma abordagem dinâmica para a criação de modelos de aprendizado profundo, permitindo depuração mais fácil e integração com bibliotecas populares. Sua flexibilidade e suporte a computação acelerada por GPU tornam-no uma escolha preferida para projetos acadêmicos e experimentação de modelos de IA.  
 
+--- 
+# Banco de Dados  
+
+Um **banco de dados** é um sistema utilizado para armazenar, organizar e gerenciar informações de forma eficiente. Ele permite operações como inserção, consulta, atualização e exclusão de dados, sendo essencial para aplicações web, empresariais e científicas. Os bancos de dados podem ser classificados em duas categorias principais: **relacionais** e **NoSQL**.  
+
+
+## Bancos de Dados Relacionais  
+
+Os **bancos de dados relacionais (RDBMS)** organizam os dados em tabelas estruturadas, utilizando **SQL (Structured Query Language)** para manipulação e consulta de informações. Eles garantem **consistência, integridade e relações entre os dados**, sendo amplamente utilizados em sistemas corporativos.  
+
+#### **MySQL**  
+MySQL é um dos bancos de dados relacionais mais populares, conhecido por sua rapidez, confiabilidade e facilidade de uso. Muito utilizado em aplicações web, é compatível com diversas linguagens de programação e tem versões de código aberto e comercial.  
+
+#### **PostgreSQL**  
+PostgreSQL é um banco de dados relacional avançado, reconhecido por sua **robustez, conformidade com padrões SQL e suporte a extensões**. Oferece recursos como transações ACID, suporte a JSON e indexação avançada, sendo ideal para aplicações que exigem alta integridade e escalabilidade.  
+
+#### **Oracle Database**  
+Oracle Database é um banco de dados relacional empresarial amplamente utilizado em grandes corporações devido à sua **segurança, escalabilidade e suporte a processamento distribuído**. Oferece ferramentas avançadas para gerenciamento de grandes volumes de dados e alta disponibilidade.  
+
+#### **SQL Server**  
+SQL Server, desenvolvido pela Microsoft, é um banco de dados relacional voltado para aplicações empresariais. Possui integração nativa com o ecossistema Microsoft e oferece recursos como análise de dados, segurança aprimorada e suporte a Big Data.  
+
+---
+
+### Bancos de Dados NoSQL  
+
+Os **bancos de dados NoSQL** foram projetados para armazenar e gerenciar grandes volumes de dados não estruturados ou semiestruturados. Eles oferecem **maior flexibilidade, escalabilidade horizontal e melhor desempenho** para certos tipos de aplicações, como redes sociais, IoT e Big Data.  
+
+#### **MongoDB**  
+MongoDB é um banco de dados NoSQL baseado em **documentos JSON**, permitindo armazenamento flexível e escalável. Muito utilizado em aplicações web modernas, ele facilita a modelagem de dados sem a rigidez dos bancos relacionais.  
+
+#### **Cassandra**  
+Apache Cassandra é um banco de dados NoSQL distribuído, projetado para alta disponibilidade e escalabilidade massiva. Usado por empresas como Facebook e Netflix, ele é ideal para aplicações que exigem replicação de dados global e tolerância a falhas.  
+
+#### **Redis**  
+Redis é um banco de dados NoSQL baseado em chave-valor, altamente otimizado para **armazenamento em memória** e desempenho ultrarrápido. Muito utilizado para cache, filas de mensagens e sessões de usuário em aplicações de alto tráfego.  
+
+#### **Firebase Realtime Database**  
+Firebase Realtime Database é um banco de dados NoSQL em tempo real, baseado em nuvem, utilizado principalmente em **aplicações móveis e web**. Ele sincroniza dados instantaneamente entre clientes, facilitando o desenvolvimento de aplicativos colaborativos e interativos.  
 
 
