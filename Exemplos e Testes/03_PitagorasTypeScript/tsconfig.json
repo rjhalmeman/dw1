@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+      "target": "ES2015", // Ou uma versão mais recente do ECMAScript
+      "module": "ESNext",
+      "outDir": "./dist", // Pasta onde o JavaScript transpilado será gerado
+      "strict": true,
+      "esModuleInterop": true,
+      "skipLibCheck": true,
+      "forceConsistentCasingInFileNames": true
+    },
+    "include": [
+      "./*.ts" // Inclui todos os arquivos .ts na pasta atual
+    ]
+  }

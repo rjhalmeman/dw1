@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Hipotenusa</title>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script src="index.js"></script>
+    <div class="container">
+        <h1>Calculadora de Hipotenusa</h1>
+        <p>Calcule a hipotenusa de um triângulo retângulo usando o Teorema de Pitágoras: a² + b² = c²</p>
+        
+        <div class="triangle">
+            <svg viewBox="0 0 200 150">
+                <polygon points="0,150 0,50 150,150" fill="none" stroke="#333" stroke-width="2"/>
+                <text x="65" y="145" font-size="12" id="linhaCatetoA">a</text>
+                <text x="5" y="100" font-size="12" id="linhaCatetoB">b</text>
+                <text x="70" y="100" font-size="12" id="linhaHipotenusa">c (hipotenusa)</text>
+                <line x1="0" y1="150" x2="15" y2="150" stroke="#333" stroke-width="2"/>
+                <line x1="0" y1="150" x2="0" y2="135" stroke="#333" stroke-width="2"/>
+            </svg>
+        </div>
+        
+        <div class="input-group">
+            <label for="cateto-a">Cateto a:</label>
+            <input type="number" id="cateto-a" step="0.01" min="0" placeholder="Digite o valor do cateto a">
+        </div>
+        
+        <div class="input-group">
+            <label for="cateto-b">Cateto b:</label>
+            <input type="number" id="cateto-b" step="0.01" min="0" placeholder="Digite o valor do cateto b">
+        </div>
+        
+        <button id="calcular">Calcular Hipotenusa</button>
+        
+        <div class="result" id="resultado">
+            O valor da hipotenusa será exibido aqui.
+        </div>
+    </div>
+
+</body>
+</html>
