@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>CRUD Fruta</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+   <div class="container">
+
+   <h1>Cadastro de Fruta</h1>
+
+   <label for="inputId">Id</label>
+   <input type="number" name="inputId" id="inputId" min="0">
+   <input type="button" value="Procure" id="btProcure" onclick="procure()" style="display:inline;">
+   <input type="button" value="Inserir" id="btInserir" onclick="inserir()" style="display:none;">
+   <input type="button" value="Alterar" id="btAlterar" onclick="alterar()" style="display:none;">
+   <input type="button" value="Excluir" id="btExcluir" onclick="excluir()" style="display:none;">
+   <br><br>
+
+   <label for="inputNome">Nome</label>
+   <input type="text" name="inputNome" id="inputNome">
+   <ul id="sugestoes" style="list-style-type: none; padding: 0;"></ul>
+   <br>
+   <label for="inputFornecedor">Fornecedor</label>
+   <input type="text" name="inputFornecedor" id="inputFornecedor">
+   <br>
+   <label for="inputColheita">Data de Colheita</label>
+   <input type="date" name="inputColheita" id="inputColheita">
+   <br>
+   <label for="inputPeso">Peso</label>
+   <input type="number" name="inputPeso" id="inputPeso" min="0">
+   <br>
+   <label for="inputPreco">Preço</label>
+   <input type="number" name="inputPreco" id="inputPreco" min="0">
+   <br>
+
+   <br><br>
+   <div id="divAviso" style="background-color: antiquewhite;"></div>
+   <br>
+   <input type="button" value="Salvar" id="btSalvar" onclick="salvar()" style="display:none;">
+   <input type="button" value="Cancelar" id="btCancelar" onclick="cancelarOperacao()" style="display:none;">
+   <br>
+   <input type="button" value="Salvar os dados no computador" onclick="prepararESalvarCSV()">
+        <input type="button" value="Buscar os dados salvos" onclick="abrirArquivoSalvoEmLocalPermanente()">
+    </div>
+
+   <!-- <input type="button" value="Listar" onclick="listar()">
+    <br><br> -->
+
+   <div id="outputSaida" style="background-color: rgb(208, 128, 121);">...</div>
+
+   <script src="./frutas.js"></script>
+   <script src="./frutascontrol.js"></script>
+</body>
+
+</html>

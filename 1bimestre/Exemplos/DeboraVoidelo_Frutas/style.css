@@ -1,0 +1,123 @@
+/* Definir a aparência geral da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FFF5E1; /* Amarelo claro de fundo */
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Título principal */
+h1 {
+    font-size: 28px;
+    color: #FF5722; /* Vermelho queimado */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilo para o formulário */
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+    font-size: 16px;
+    color: #FF5722; /* Vermelho */
+}
+
+input[type="text"], 
+input[type="number"], 
+input[type="date"] {
+    padding: 10px;
+    margin-bottom: 15px;
+    width: 300px;
+    border: 1px solid #FF9800; /* Laranja */
+    border-radius: 5px;
+    font-size: 14px;
+    transition: border 0.3s;
+}
+
+input[type="text"]:focus, 
+input[type="number"]:focus, 
+input[type="date"]:focus {
+    border-color: #4CAF50; /* Verde */
+    outline: none;
+}
+
+/* Botões */
+input[type="button"] {
+    background-color: #FF9800; /* Laranja */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 10px;
+    transition: background-color 0.3s;
+}
+
+input[type="button"]:hover {
+    background-color: #FF5722; /* Vermelho queimado */
+}
+
+input[type="button"]:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Estilo para as mensagens de aviso */
+#divAviso {
+    background-color: #FFF3E0; /* Amarelo muito claro */
+    color: #FF5722; /* Vermelho queimado */
+    border: 1px solid #FF5722; /* Vermelho queimado */
+    padding: 10px;
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+/* Div que exibe a lista das frutas */
+#outputSaida {
+    margin-top: 20px;
+    background-color: #FFF8E1; /* Amarelo claro */
+    padding: 20px;
+    width: 100%;
+    border: 1px solid #FF9800; /* Laranja */
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.fruta-item {
+    border-bottom: 1px solid #FFEB3B; /* Amarelo suave */
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.fruta-item:last-child {
+    border-bottom: none;
+}
+
+.fruta-item strong {
+    color: #4CAF50; /* Verde */
+}
+
+/* Ajustes para layout responsivo */
+@media (max-width: 600px) {
+    input[type="text"], 
+    input[type="number"], 
+    input[type="date"] {
+        width: 100%;
+    }
+
+    input[type="button"] {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
