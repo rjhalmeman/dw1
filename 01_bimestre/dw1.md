@@ -81,7 +81,6 @@ A arquitetura **MVC** é amplamente utilizada no desenvolvimento web devido à s
 ---
 # Linguagens
 
-![alt text](image.png)
 
 ## Linguagens de Marcação
 
