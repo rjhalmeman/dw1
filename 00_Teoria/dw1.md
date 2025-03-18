@@ -3,6 +3,9 @@
 # O que é Desenvolvimento Web?
 
 Desenvolvimento web é o processo de criação e manutenção de sites e aplicações na internet. Envolve várias etapas, como o planejamento, o design, a programação e a implementação de funcionalidades. O desenvolvimento web pode ser dividido em duas áreas principais:
+<p align="center">
+  <img src="./imagens/html.png" alt="DW" width="400" height="400">
+</p>
 
 ## 1. Frontend (ou Desenvolvimento do Lado do Cliente)
 - Refere-se ao que os usuários veem e interagem diretamente em um site ou aplicação.
@@ -22,7 +25,9 @@ Além disso, o desenvolvimento de aplicações web também pode envolver o uso d
 
 É uma área essencial para a criação de experiências digitais na web, seja para sites pessoais, blogs, redes sociais, e-commerce ou aplicações corporativas.
 
-![alt text](image-1.png)
+<p align="center">
+  <img src="./imagens/fullstack.png" alt="" width="200" height="200">
+</p>
 
 ## MVC
 
