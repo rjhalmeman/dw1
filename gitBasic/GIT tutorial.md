@@ -2,6 +2,15 @@
 
 O mínimo necessário para usar o github nas aulas de DW1.
 
+É importante saber que:
+
+✅ Git é um sistema de controle de versões distribuído. Ele permite que você acompanhe as mudanças no código, trabalhe em equipe sem conflitos e volte para versões anteriores do projeto se necessário. O Git funciona localmente no seu computador.
+
+✅ GitHub é uma plataforma online que hospeda repositórios Git. Ele permite colaboração remota, armazenamento de código na nuvem e integração com ferramentas como CI/CD.
+
+🔹 Resumindo: O Git é a ferramenta, o GitHub é o serviço que facilita o compartilhamento e colaboração no código.
+(colaboração da Maria Elisa...)
+
 ## Criar a conta no github.
 Sem a conta, nada acontece...
 
@@ -46,7 +55,7 @@ Marque tudo
 Clique em "Generate token".
 O token será exibido uma única vez. Copie e salve em um local seguro. Salve junto com os códigos de recuperação da conta.
 
-## Instalar github 
+## Instalar git
 
 ### No windows:
 
@@ -107,5 +116,7 @@ vai pedir usuário e senha
 ``` Password: (Colar seu token com ctrl shift v)``` 
 
 deverá fazer o upload. Vá na página do github e confira se está lá.
+
+
 
 
