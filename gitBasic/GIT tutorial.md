@@ -1,4 +1,4 @@
-# Github  - resumo do resumo do resumo ...
+# Git e Github  - resumo do resumo do resumo ...
 
 O mínimo necessário para usar o github nas aulas de DW1.
 
@@ -8,7 +8,8 @@ O mínimo necessário para usar o github nas aulas de DW1.
 
 ✅ GitHub é uma plataforma online que hospeda repositórios Git. Ele permite colaboração remota, armazenamento de código na nuvem e integração com ferramentas como CI/CD.
 
-🔹 Resumindo: O Git é a ferramenta, o GitHub é o serviço que facilita o compartilhamento e colaboração no código.
+🔹 Resumindo: O Git é a ferramenta, o GitHub é um serviço na nuvem que hospeda repositórios Git, permitindo colaboração remota, versionamento de código e integração com outras ferramentas.
+
 (colaboração da Maria Elisa...)
 
 ## Criar a conta no github.
