@@ -6,7 +6,7 @@ O mínimo necessário para usar o github nas aulas de DW1.
 
 ✅ Git é um sistema de controle de versões distribuído. Ele permite que você acompanhe as mudanças no código, trabalhe em equipe sem conflitos e volte para versões anteriores do projeto se necessário. O Git funciona localmente no seu computador.
 
-✅ GitHub é uma plataforma online que hospeda repositórios Git. Ele permite colaboração remota, armazenamento de código na nuvem e integração com ferramentas como CI/CD.
+✅ GitHub é uma plataforma online que hospeda repositórios Git. Ele permite colaboração remota, armazenamento de código na nuvem e integração com ferramentas como CI/CD (Integração Contínua e Entrega Contínua).
 
 🔹 Resumindo: O Git é a ferramenta, o GitHub é um serviço na nuvem que hospeda repositórios Git, permitindo colaboração remota, versionamento de código e integração com outras ferramentas.
 
