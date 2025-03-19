@@ -60,11 +60,11 @@ No Debian / Ubuntu / Mint e distribuições derivadas, você encontrará a vers�
 
 2) Sincronize o repositório com o comando:
 
-sudo apt update
+``` sudo apt update``` 
 
 3) Feito isso, instale o Git rodando o comando:
 
-sudo apt install git
+``` sudo apt install git``` 
 
 
 ## Como usar o token no Git?
@@ -87,18 +87,24 @@ adicione um doc nessa pasta (para teste)
 5) entre na pasta (cd nomeDoSeuRepositorio)
 
 6) digite
-git add . 
-cuidado com os espaços, eles são necessários
+
+``` git add . ``` 
+
+(cuidado com os espaços, eles são necessários)
 
 7) fazer o commit
-git commit -m "uma mensagem qualquer"
+
+``` git commit -m "uma mensagem qualquer" ``` 
 
 8) digite
-git push https://github.com/seuUsuarioGit/nomeDoSeuRepositorio
+
+``` git push https://github.com/seuUsuarioGit/nomeDoSeuRepositorio ``` 
 
 vai pedir usuário e senha
-User: seuUsuarioGit
-Password: <Colar seu token com ctrl shift v>
+
+``` User: seuUsuarioGit``` 
+
+``` Password: (Colar seu token com ctrl shift v)``` 
 
 deverá fazer o upload. Vá na página do github e confira se está lá.
 
