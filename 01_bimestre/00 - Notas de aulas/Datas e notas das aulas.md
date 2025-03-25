@@ -9,21 +9,22 @@ Apresentação da disciplina. Posicionamento da disciplina no curso. CSS. HTML. 
 ## Teremos um cardápio variado
 
 <p align="center">
-  <img src="./imagens/image.png" alt="DW" width="50" height="50">
+  <img src="./imagens/image.png" alt="DW" width="100" height="100">
+  <img src="./imagens/image-1.png" alt="DW" width="100" height="100">
 </p>
 
 <p align="center">
-  <img src="./imagens/image-1.png" alt="DW" width="50" height="50">
+Não é tudo em uma única refeição.
 </p>
-
-Não é para comer "de tudo" num dia só.
-
 
 ## 20/03/2025 - qui
 Subir para github. Baixar do github.
 
 ## 25/03/2025 - ter
 Clonar o próprio repositório.
+
+https://www.w3schools.com/whatis/whatis_htmldom.asp
+
 Recapitulação JS. Conteúdos vistos em algoritmos. Exercícios.
 Desenvolvimento WEB
 
