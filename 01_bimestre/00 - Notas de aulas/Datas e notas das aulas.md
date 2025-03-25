@@ -11,11 +11,9 @@ Apresentação da disciplina. Posicionamento da disciplina no curso. CSS. HTML. 
 <p align="center">
   <img src="./imagens/image.png" alt="DW" width="100" height="100">
   <img src="./imagens/image-1.png" alt="DW" width="100" height="100">
-</p>
-
-<p align="center">
 Não é tudo para uma única refeição.
 </p>
+
 
 ## 20/03/2025 - qui
 Subir para github. Baixar do github.
@@ -23,6 +21,7 @@ Subir para github. Baixar do github.
 ## 25/03/2025 - ter
 Clonar o próprio repositório.
 
+DOM (Document Object Model)
 https://www.w3schools.com/whatis/whatis_htmldom.asp
 
 Recapitulação JS. Conteúdos vistos em algoritmos. Exercícios.
