@@ -14,7 +14,7 @@ Apresentação da disciplina. Posicionamento da disciplina no curso. CSS. HTML. 
 </p>
 
 <p align="center">
-Não é tudo em uma única refeição.
+Não é tudo para uma única refeição.
 </p>
 
 ## 20/03/2025 - qui
