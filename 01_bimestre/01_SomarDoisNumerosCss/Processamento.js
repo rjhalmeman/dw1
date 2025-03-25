@@ -10,6 +10,8 @@ function calcularSoma() {
 
         // Atualizar o campo de resposta com o resultado da soma
         document.getElementById("resp").value = soma;
+
+        document.getElementById("vermelho").innerText= "vermelhou <br> algo";
     } else {
         // Se algum dos valores não for um número, exibir uma mensagem de erro
         document.getElementById("resp").value = "Valores inválidos";
