@@ -9,11 +9,11 @@ Apresentação da disciplina. Posicionamento da disciplina no curso. CSS. HTML. 
 ## Teremos um cardápio variado
 
 <p align="center">
-  <img src="./imagens/image.png" alt="DW" width="400" height="400">
+  <img src="./imagens/image.png" alt="DW" width="50" height="50">
 </p>
 
 <p align="center">
-  <img src="./imagens/image-1.png" alt="DW" width="400" height="400">
+  <img src="./imagens/image-1.png" alt="DW" width="50" height="50">
 </p>
 
 Não é para comer "de tudo" num dia só.
@@ -21,10 +21,10 @@ Não é para comer "de tudo" num dia só.
 
 ## 20/03/2025 - qui
 Subir para github. Baixar do github.
-Recapitulação JS. Conteúdos vistos em algoritmos. Exercícios.
-
 
 ## 25/03/2025 - ter
+Clonar o próprio repositório.
+Recapitulação JS. Conteúdos vistos em algoritmos. Exercícios.
 Desenvolvimento WEB
 
 ## 27/03/2025 - qui
