@@ -28,7 +28,10 @@ Recapitulação JS. Conteúdos vistos em algoritmos. Exercícios.
 Desenvolvimento WEB
 
 ## 27/03/2025 - qui
-Recapitulação JS. Conteúdos vistos em algoritmos. Exercícios.
+Recapitulação da aula anterior (DOM)
+Recapitulação JS e conteúdos vistos em algoritmos. 
+
+Exercícios com manipulação do DOM.
 
 ## 01/04/2025 - ter
 Terminologia. Uso de IA generativa de forma produtiva. CSS e JS.
