@@ -26,4 +26,8 @@ No seu código HTML + CSS:
 - `font-size: 2em;` → O número é duas vezes maior que a fonte padrão do `painelCentral`.
 - `padding: 20px;` → Adiciona um espaçamento interno fixo de 20 pixels.
 
-Se precisar de mais detalhes ou ajustes, me avise! 🚀
+<br>
+<br>
+<p align="center">
+<a href="https://github.com/rjhalmeman/dw1/blob/main/Exemplos/UnidadesDeMedidaCSS/index.html">Aqui tem um programa exemplificando</a>
+</p>
