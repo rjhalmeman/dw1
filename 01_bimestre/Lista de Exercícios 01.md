@@ -11,7 +11,7 @@ aqui para ver um exemplo</a> </p>
 
 1. Numa interface gráfica adicione dois botões, chamados azul e verde, que ao clicar no azul a cor de fundo da página fica azul e ao clicar no verde a cor de fundo fica verde.
 
-2. Eventos não associados a UM objeto (elemento) de tela. Exiba um número na tela e um botão que, ao ser pressionado, incremente o número.
+2. Eventos não associados a um botão. Usar outro elemento. Exiba um número na tela que é incrementado ao clicar em qualquer parte da tela. Faça também um botão para zerar o contador (reiniciar).
 
 3. Adicione um botão que mostre ou esconda um parágrafo ao ser pressionado.
 
