@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alterar Cor de Fundo</title>
+    <style>
+        body {
+            text-align: center;
+            padding: 50px;
+        }
+        button {
+            font-size: 16px;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+        }
+        #azul {
+            background-color: blue;
+            color: white;
+        }
+        #verde {
+            background-color: green;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <button id="azul" onclick="mudarCor('blue')">Azul</button>
+    <button id="verde" onclick="mudarCor('green')">Verde</button>
+    
+    <script>
+        function mudarCor(cor) {
+            document.body.style.backgroundColor = cor;
+        }
+    </script>
+</body>
+</html>

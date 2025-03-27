@@ -1,0 +1,19 @@
+body {
+    text-align: center;
+    padding: 50px;
+}
+button {
+    font-size: 36px;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    cursor: pointer;
+}
+#azul {
+    background-color: blue;
+    color: white;
+}
+#verde {
+    background-color: green;
+    color: white;
+}
