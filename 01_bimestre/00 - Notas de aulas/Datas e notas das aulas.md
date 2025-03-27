@@ -33,6 +33,9 @@ Recapitulação JS e conteúdos vistos em algoritmos.
 
 Exercícios com manipulação do DOM.
 
+https://github.com/rjhalmeman/dw1/blob/main/01_bimestre/Lista%20de%20Exerc%C3%ADcios%2001.md
+
+
 ## 01/04/2025 - ter
 Iniciantes (código fonte tv)
 https://www.youtube.com/watch?v=3-3lTJlBU78
