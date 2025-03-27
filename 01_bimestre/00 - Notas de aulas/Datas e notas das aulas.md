@@ -34,6 +34,9 @@ Recapitulação JS e conteúdos vistos em algoritmos.
 Exercícios com manipulação do DOM.
 
 ## 01/04/2025 - ter
+Iniciantes (código fonte tv)
+https://www.youtube.com/watch?v=3-3lTJlBU78
+
 Terminologia. Uso de IA generativa de forma produtiva. CSS e JS.
 
 ## 08/04/2025 - ter
