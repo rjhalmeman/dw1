@@ -1,30 +1,30 @@
 # 01 - Lista de Exercícios
-## objetivo: treinar a manipulação de elementos HTML e CSS do DOM usando JavaScript
+## Objetivo: treinar a manipulação de elementos HTML e CSS do DOM usando JavaScript
 
-## para cada exercício, crie uma pasta (Ex. 01-L1). Nessa pasta separe o HTML, o CSS e o JS. Este projeto é um exemplo dessa separação. 
+## Instruções
+<p align="center"> Para cada exercício, crie uma pasta (Ex. 01-L1). Nessa pasta
+separe o HTML, o CSS e o JS. 
+<a ref="https://github.com/rjhalmeman/dw1/tree/main/Exemplos/SomarDoisNumerosHTMLCssJS">Clique
+aqui para ver um exemplo</a> </p>
+
+## Exercícios
 
 1. Numa interface gráfica adicione dois botões, chamados azul e verde, que ao clicar no azul a cor de fundo da página fica azul e ao clicar no verde a cor de fundo fica verde.
 
 2. Eventos não associados a UM objeto (elemento) de tela. Exiba um número na tela e um botão que, ao ser pressionado, incremente o número.
 
-3. Mostrar/Ocultar Texto. Adicione um botão que mostre ou esconda um parágrafo ao ser pressionado.
+3. Adicione um botão que mostre ou esconda um parágrafo ao ser pressionado.
 
-4. Mudar o Texto do Botão. Crie um botão que altere seu próprio texto toda vez que for clicado.
+4. Crie um botão que altere seu próprio texto toda vez que for clicado.
 
 5. Ao clicar em um botão, um parágrafo muda a cor, tamanho da fonte e estilo (negrito, itálico).
 
-Trocar Imagens. Exiba uma imagem e um botão que a troque por outra quando pressionado.
+6. Exiba uma imagem e um botão que a troque por outra quando pressionado.
 
-Validar um Formulário
+7. Crie um formulário simples e mostre mensagens de erro se o usuário não preencher os campos corretamente. Por exemplo, faça um programa que calcule a hipotenusa (usando o teorema de pitágoras). Estilize de modo que se o usuário informar valores impróprios os inputs mudem de cor, sinalizando que ali aconteceu um erro.
 
-Crie um formulário simples e mostre mensagens de erro se o usuário não preencher os campos corretamente.
+8. Exiba a hora atual na tela e atualize-a a cada segundo. Faça com que a fonte ocupe toda a área disponível na tela, que o fundo seja preto com fonte na cor amarela e negrito.
 
-Efeito de Digitação
+9. Permita que o usuário adicione e remova itens de uma lista de tarefas dinamicamente. A lista deve conter 5 itens iniciais (uma lista com os nomes de 5 frutas, por exemplo).
 
-Simule um efeito de digitação, exibindo um texto letra por letra em um parágrafo.
-
-Relógio Atualizado em Tempo Real
-
-Exiba a hora atual na tela e atualize-a a cada segundo.
-
-Permita que o usuário adicione e remova itens de uma lista de tarefas dinamicamente.
+10. Faça um programa com HTML, JS e CSS que resolva a equação de Bháskara. Estilize. Ajuste para que se o usuário informar valores errados mensagens estilizadas sejam exibidas.

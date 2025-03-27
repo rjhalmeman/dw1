@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Unidades de Medida no CSS</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            padding: 20px;
+        }
+
+        .box {
+            padding: 10px;
+            color: black;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+        /* Unidades absolutas */
+        .px-box {
+            width: 200px;
+            height: 100px;
+            background-color: red;
+            font-size: 16px;
+        }
+
+        /* Unidades relativas */
+        .em-box {
+            width: 10em;
+            height: 5em;
+            background-color: green;
+            font-size: 2em;
+        }
+
+        .rem-box {
+            width: 20rem;
+            height: 10rem;
+            background-color: blue;
+            font-size: 1.5rem;
+        }
+
+        /* Unidades relativas a elementos pai */
+        .percent-box {
+            width: 50%;
+            height: 50px;
+            background-color: orange;
+            font-size: 120%;
+        }
+
+        /* Unidades da viewport */
+        .vh-box {
+            width: 80vw;
+            height: 20vh;
+            background-color: purple;
+            font-size: 3vh;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box px-box">200px x 100px</div>
+        <div class="box em-box">10em x 5em</div>
+        <div class="box rem-box">20rem x 10rem</div>
+        <div class="box percent-box">50% da largura</div>
+        <div class="box vh-box">80vw x 20vh</div>
+    </div>
+</body>
+</html>
