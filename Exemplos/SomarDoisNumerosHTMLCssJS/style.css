@@ -1,0 +1,23 @@
+.containerEntradaDeDados {
+    background-color: #f0f0f0;
+    /* Cor de fundo para entrada de dados */
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.containerSaidaDeDados {
+    background-color: #d3d3d3;
+    /* Cor de fundo para saída */
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.containerProcessamento {
+    background-color: #e1ffcd;
+    /* Cor de fundo para processamento */
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
