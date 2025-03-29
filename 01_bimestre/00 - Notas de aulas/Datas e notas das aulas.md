@@ -35,6 +35,10 @@ Exercícios com manipulação do DOM.
 
 https://github.com/rjhalmeman/dw1/blob/main/01_bimestre/Lista%20de%20Exerc%C3%ADcios%2001.md
 
+- Exercício feito em sala de aulas
+https://github.com/rjhalmeman/dw1/tree/main/01_bimestre/2025-03-27%20-%20CorDoFundo
+
+
 
 ## 01/04/2025 - ter
 Iniciantes (código fonte tv)
