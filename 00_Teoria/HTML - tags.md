@@ -5,8 +5,6 @@
 
 A tag `<input>` é um dos principais elementos de formulários no HTML. Ela é usada para capturar dados do usuário e pode representar diferentes tipos de campos, dependendo do valor do atributo `type`.
 
----
-
 ## Exemplo Básico
 
 ```html
@@ -118,14 +116,10 @@ Ideal para destacar ou modificar partes do conteúdo dentro de um bloco de texto
 
 O `<button>` é uma tag HTML usada para criar botões interativos em uma página da web.  
 
----
-
 ## Sintaxe Básica
 ```html
 <button>Clique aqui</button>
 ```
-
----
 
 ## 🔹 **Atributos Comuns**
 ### 🔹 `type`
@@ -156,8 +150,6 @@ Usados para estilização com CSS.
 <button class="btn-azul">Botão Azul</button>
 ```
 
----
-
 ## 🖼 **Botão com Ícone**
 Você pode usar um ícone dentro do botão com **FontAwesome** ou **SVG**:
 
@@ -166,9 +158,6 @@ Você pode usar um ícone dentro do botão com **FontAwesome** ou **SVG**:
   <i class="fas fa-check"></i> Confirmar
 </button>
 ```
-
----
-
 ## 🎨 **Estilizando com CSS**
 ```css
 button {
@@ -184,8 +173,6 @@ button:hover {
 }
 ```
 
----
-
 ## 📩 **Botão Dentro de um Formulário**
 ```html
 <form action="/enviar" method="post">
@@ -197,16 +184,12 @@ button:hover {
 
 A tag `<div>` é um elemento genérico de contêiner no HTML, usado para agrupar elementos e aplicar estilos ou scripts a eles.  
 
----
-
 ## 📌 **Sintaxe Básica**  
 ```html
 <div>
   Conteúdo dentro da div
 </div>
 ```
-
----
 
 ## 🔹 **Atributos Comuns**
 ### 🔹 `id`
@@ -236,7 +219,7 @@ Adiciona estilos diretamente no elemento (não recomendado para projetos grandes
 </div>
 ```
 
----
+
 
 ## 🎨 **Estilizando com CSS**
 ```css
@@ -256,7 +239,7 @@ Adiciona estilos diretamente no elemento (não recomendado para projetos grandes
 </div>
 ```
 
----
+
 
 ## 📦 **Uso da `<div>` como Layout**
 A `<div>` é amplamente usada para estruturar layouts de páginas da web.  
@@ -285,7 +268,7 @@ A `<div>` é amplamente usada para estruturar layouts de páginas da web.
 }
 ```
 
----
+
 
 ## 🏗 **Exemplo Completo de Layout**
 ```html
@@ -333,7 +316,7 @@ A `<div>` é amplamente usada para estruturar layouts de páginas da web.
 
 A tag `<label>` é usada para associar um rótulo descritivo a um elemento de entrada (como `<input>`, `<textarea>`, etc.), melhorando a acessibilidade e a usabilidade dos formulários.  
 
----
+
 
 ## 📌 **Sintaxe Básica**  
 ```html
@@ -341,7 +324,7 @@ A tag `<label>` é usada para associar um rótulo descritivo a um elemento de en
 <input type="text" id="nome" name="nome">
 ```
 
----
+
 
 ## 🔹 **Atributos Comuns**
 ### 🔹 `for`
@@ -360,8 +343,6 @@ Se usado sem `for`, o `<label>` pode englobar um `<input>` diretamente.
   <input type="checkbox" name="termos">
 </label>
 ```
-
----
 
 ## 🎨 **Estilizando com CSS**
 ```css
@@ -382,7 +363,7 @@ input {
 <input type="password" id="senha" name="senha">
 ```
 
----
+
 
 ## 📦 **Exemplo Completo de Formulário**
 ```html
@@ -420,12 +401,12 @@ input {
   </fieldset>
 </form>
 ```
-
-# 📌 Tag `<form>` no HTML  
+--- 
+# 📌 Tag `<form>`
 
 A tag `<form>` é usada para criar formulários interativos que permitem a entrada e o envio de dados para um servidor.  
 
----
+
 
 ## 📌 **Sintaxe Básica**  
 ```html
@@ -437,7 +418,7 @@ A tag `<form>` é usada para criar formulários interativos que permitem a entra
 </form>
 ```
 
----
+
 
 ## 🔹 **Atributos Comuns**
 ### 🔹 `action`
