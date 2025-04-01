@@ -41,6 +41,17 @@ https://github.com/rjhalmeman/dw1/tree/main/01_bimestre/2025-03-27%20-%20CorDoFu
 
 
 ## 01/04/2025 - ter
+
+Terminologia. Uso de IA generativa de forma produtiva. CSS e JS.
+
+Navegando no sistema de pastas 
+cd
+cd ..
+
+IMG
+
+## 08/04/2025 - ter
+
 Iniciantes (código fonte tv)
 https://www.youtube.com/watch?v=3-3lTJlBU78
 
@@ -53,9 +64,6 @@ Entender como funcionam os caminhos é essencial para organização de código
 Terminologia. Uso de IA generativa de forma produtiva. CSS e JS.
 
 Enviar dados de uma página para outra.
-
-## 08/04/2025 - ter
-Terminologia. Uso de IA generativa de forma produtiva. CSS e JS.
 
 ## 10/04/2025 - qui
 Terminologia. Uso de IA generativa de forma produtiva. CSS e JS.
