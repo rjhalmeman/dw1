@@ -51,9 +51,10 @@ cd ..
 Exercício feito em sala
 https://github.com/rjhalmeman/dw1/tree/main/01_bimestre/2025-04-01%20-%20Imagens
 
+Tag IMG
 
-
-IMG
+## 03/04/2025 - Quinta
+Exercícios
 
 ## 08/04/2025 - ter
 
