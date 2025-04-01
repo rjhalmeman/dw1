@@ -44,7 +44,15 @@ https://github.com/rjhalmeman/dw1/tree/main/01_bimestre/2025-03-27%20-%20CorDoFu
 Iniciantes (código fonte tv)
 https://www.youtube.com/watch?v=3-3lTJlBU78
 
+![alt text](./imagens/cap3LivroProgramadorPragmatico.png)
+
+
+Estrutura de diretórios (pastas)
+Entender como funcionam os caminhos é essencial para organização de código
+
 Terminologia. Uso de IA generativa de forma produtiva. CSS e JS.
+
+Enviar dados de uma página para outra.
 
 ## 08/04/2025 - ter
 Terminologia. Uso de IA generativa de forma produtiva. CSS e JS.

@@ -21,7 +21,7 @@ aqui para ver um exemplo</a> </p>
 
 6. Exiba uma imagem e um botão que a troque por outra quando pressionado.
 
-7. Crie um formulário simples e mostre mensagens de erro se o usuário não preencher os campos corretamente. Por exemplo, faça um programa que calcule a hipotenusa (usando o teorema de pitágoras). Estilize de modo que se o usuário informar valores impróprios os inputs mudem de cor, sinalizando que ali aconteceu um erro.
+7. Crie um **formulário** simples e mostre mensagens de erro se o usuário não preencher os campos corretamente. Por exemplo, faça um programa que calcule a hipotenusa (usando o teorema de pitágoras). Estilize de modo que se o usuário informar valores impróprios os inputs mudem de cor, sinalizando que ali aconteceu um erro.
 
 8. Exiba a hora atual na tela e atualize-a a cada segundo. Faça com que a fonte ocupe toda a área disponível na tela, que o fundo seja preto com fonte na cor amarela e negrito.
 

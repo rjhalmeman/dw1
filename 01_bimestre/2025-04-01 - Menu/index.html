@@ -1,0 +1,25 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <label for="palavra">Palavra a ser enviada</label>
+        <input type="text" id="palavra" placeholder="Digite uma palavra">
+        <input type="button" value="Primeira" onclick="enviar('primeira.html')">
+        <input type="button" value="Segunda" onclick="enviar('segunda.html')">
+    </div>
+    <form id="form" method="GET" style="display:none;">
+        <input type="hidden" name="palavra" id="inputPalavra">
+    </form>
+    <script src="./scriptIndex.js"></script>
+</body>
+
+</html>
