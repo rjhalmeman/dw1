@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placar de Jogo</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            text-align: center; 
+            background-color: #f4f4f4; 
+            margin: 0;
+            padding: 0;
+        }
+        .container { 
+            max-width: 90%; 
+            margin: auto; 
+            padding: 20px; 
+        }
+        .placar {
+            display: flex; 
+            justify-content: space-around; 
+            align-items: center;
+            font-size: 48px; 
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 15px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .time { 
+            padding: 40px; 
+            border-radius: 10px; 
+            color: white; 
+            font-size: 36px;
+            text-align: center;
+            flex: 1;
+            margin: 10px;
+        }
+        .timeA { background-color: blue; }
+        .timeB { background-color: red; }
+        .historico {
+            margin-top: 20px; 
+            border-top: 2px solid #ccc; 
+            padding-top: 10px;
+            font-size: 24px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        button {
+            margin: 10px; 
+            padding: 15px; 
+            font-size: 24px; 
+            border: none; 
+            cursor: pointer;
+            border-radius: 10px;
+            background-color: #333;
+            color: white;
+            transition: 0.3s;
+        }
+        button:hover {
+            background-color: #555;
+        }
+        input {
+            padding: 10px; 
+            font-size: 24px;
+            text-align: center;
+            width: 40%;
+            margin-bottom: 20px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+        }
+        p {
+            font-size: 90px; /* Aumentando o tamanho da fonte dos pontos */
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 style="font-size: 48px;">Placar de Jogo</h1>
+        <div>
+            <input type="text" id="nomeA" placeholder="Nome do Time A" value="Time A"> 
+            <input type="text" id="nomeB" placeholder="Nome do Time B" value="Time B">
+        </div>
+        <div class="placar">
+            <div class="time timeA">
+                <h2 id="displayNomeA">Time A</h2>
+                <p id="scoreA">0</p>
+                <button onclick="addPoint('A')">+1 Ponto</button>
+                <button onclick="removePoint('A')">-1 Ponto</button>
+            </div>
+            <div class="time timeB">
+                <h2 id="displayNomeB">Time B</h2>
+                <p id="scoreB">0</p>
+                <button onclick="addPoint('B')">+1 Ponto</button>
+                <button onclick="removePoint('B')">-1 Ponto</button>
+            </div>
+        </div>
+        <button onclick="novoSet()">Novo Set</button>
+        <button onclick="resetPlacar()">Zerar Placar</button>
+        <div class="historico">
+            <h3>Histórico</h3>
+            <ul id="historico"></ul>
+        </div>
+    </div>
+
+    <script>
+        let scoreA = 0, scoreB = 0, set = 1;
+
+        document.getElementById("nomeA").addEventListener("input", function() {
+            document.getElementById("displayNomeA").innerText = this.value;
+        });
+        document.getElementById("nomeB").addEventListener("input", function() {
+            document.getElementById("displayNomeB").innerText = this.value;
+        });
+
+        function addPoint(team) {
+            if (team === 'A') {
+                scoreA++;
+                document.getElementById('scoreA').innerText = scoreA;
+            } else {
+                scoreB++;
+                document.getElementById('scoreB').innerText = scoreB;
+            }
+            registrarHistorico(`Ponto para ${document.getElementById(`displayNome${team}`).innerText}`);
+        }
+
+        function removePoint(team) {
+            if (team === 'A' && scoreA > 0) {
+                scoreA--;
+                document.getElementById('scoreA').innerText = scoreA;
+            } else if (team === 'B' && scoreB > 0) {
+                scoreB--;
+                document.getElementById('scoreB').innerText = scoreB;
+            }
+            registrarHistorico(`Ponto removido de ${document.getElementById(`displayNome${team}`).innerText}`);
+        }
+
+        function novoSet() {
+            registrarHistorico(`Set ${set}: ${document.getElementById("displayNomeA").innerText} ${scoreA} x ${scoreB} ${document.getElementById("displayNomeB").innerText}`);
+            scoreA = 0;
+            scoreB = 0;
+            document.getElementById('scoreA').innerText = scoreA;
+            document.getElementById('scoreB').innerText = scoreB;
+            set++;
+        }
+
+        function resetPlacar() {
+            scoreA = 0;
+            scoreB = 0;
+            set = 1;
+            document.getElementById('scoreA').innerText = scoreA;
+            document.getElementById('scoreB').innerText = scoreB;
+            document.getElementById('historico').innerHTML = "";
+        }
+
+        function registrarHistorico(texto) {
+            const li = document.createElement("li");
+            li.innerText = texto;
+            document.getElementById("historico").appendChild(li);
+        }
+    </script>
+</body>
+</html>

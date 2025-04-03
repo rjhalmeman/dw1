@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e6f7ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+.container {
+    text-align: center;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    width: 600px;
+    max-width: 100%;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 36px;
+    color: #0088cc;
+    font-weight: bold;
+}
+
+.team-names input {
+    width: 45%;
+    padding: 15px;
+    font-size: 20px;
+    margin: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    color: #333;
+}
+
+.placar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.team-box {
+    width: 45%;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #444;
+}
+
+#pointsTeam1, #pointsTeam2 {
+    font-size: 80px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+button {
+    background-color: #00cc66;
+    color: white;
+    border: none;
+    padding: 20px;
+    margin: 5px;
+    font-size: 30px;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 80px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #00b359;
+}
+
+button:active {
+    background-color: #00994d;
+}
+
+.sets-box {
+    background-color: #f0f8ff;
+    border-radius: 10px;
+    padding: 20px;
+    width: 20%;
+}
+
+#setsText {
+    font-size: 28px;
+    font-weight: bold;
+    color: #444;
+}
+
+.historico {
+    margin-top: 30px;
+    text-align: left;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+#historyList {
+    list-style-type: none;
+    padding: 0;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+#historyList li {
+    background-color: #f9f9f9;
+    padding: 12px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}

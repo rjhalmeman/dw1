@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placar Esportivo</title>
+   <link rel="stylesheet" href="./placar.css">
+</head>
+<body>
+    <div class="title">PLACAR DE VÔLEI</div>
+    <div class="container">
+        <div class="team-container">
+            <input type="text" id="team1" placeholder="Time 1" class="team">
+            <span class="score" id="score1">0</span>
+            <div class="buttons">
+                <button onclick="addPoint(1)">+</button>
+                <button onclick="removePoint(1)">-</button>
+                <button onclick="resetScore(1)">Zerar</button>
+            </div>
+            <span class="sets" id="sets1">0</span>
+            <div class="buttons">
+                <button onclick="addSet(1)">+ Set</button>
+                <button onclick="removeSet(1)">- Set</button>
+            </div>
+        </div>
+        <h1>X</h1>
+        <div class="team-container">
+            <input type="text" id="team2" placeholder="Time 2" class="team">
+            <span class="score" id="score2">0</span>
+            <div class="buttons">
+                <button onclick="addPoint(2)">+</button>
+                <button onclick="removePoint(2)">-</button>
+                <button onclick="resetScore(2)">Zerar</button>
+            </div>
+            <span class="sets" id="sets2">0</span>
+            <div class="buttons">
+                <button onclick="addSet(2)">+ Set</button>
+                <button onclick="removeSet(2)">- Set</button>
+            </div>
+        </div>
+    </div>
+    <div class="history-container">
+        <h3>Histórico de Pontuação</h3>
+        <table id="history">
+            <tr><th>Time</th><th>Ponto</th><th>Set</th></tr>
+        </table>
+        <button class="clear-history" onclick="clearHistory()">Limpar Histórico</button>
+    </div>
+  <script src="./placar.js"></script>
+</body>
+</html>
