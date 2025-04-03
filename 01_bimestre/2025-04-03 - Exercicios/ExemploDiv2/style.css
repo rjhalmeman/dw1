@@ -1,0 +1,29 @@
+#cima{
+    background-color: aquamarine;
+    text-align: center;
+}
+#meio {
+    display: flex;
+}
+
+.coluna {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.esquerda {
+    background-color: lightblue;
+}
+
+.direita {
+    background-color: lightcoral;
+}
+
+
+#baixo{
+    background-color: chocolate;
+}
+

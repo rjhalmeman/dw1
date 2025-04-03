@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placar de Vôlei</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="scoreboard">
+        <div class="team">
+            <h1>Time A</h1>
+            <div class="score" id="scoreA">0</div>
+            <p>Sets: <span id="setsA">0</span></p>
+            <div class="buttons">
+                <button onclick="addPoint('A')">+1</button>
+                <button onclick="removePoint('A')">-1</button>
+            </div>
+        </div>
+        <div class="divider">X</div>
+        <div class="team">
+            <h1>Time B</h1>
+            <div class="score" id="scoreB">0</div>
+            <p>Sets: <span id="setsB">0</span></p>
+            <div class="buttons">
+                <button onclick="addPoint('B')">+1</button>
+                <button onclick="removePoint('B')">-1</button>
+            </div>
+        </div>
+    </div>
+
+    <button class="reset" onclick="resetScore()">Zerar Placar</button>
+
+    <!-- Histórico fixo na tela -->
+    <div class="history-container">
+        <h2>📜 Histórico de Pontos</h2>
+        <ul id="historyList"></ul>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>

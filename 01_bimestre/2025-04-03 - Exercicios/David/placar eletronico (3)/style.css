@@ -1,0 +1,145 @@
+/* Garante centralização e evita cortes */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden; /* Evita rolagem */
+    margin: 0;
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+/* Container principal */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90vw; /* Ajuste para se adaptar ao projetor */
+}
+
+/* Área do placar */
+.scoreboard {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    gap: 5vw; /* Ajusta espaçamento relativo */
+}
+
+/* Estilização dos nomes dos times */
+input {
+    font-size: 2rem;
+    text-align: center;
+    width: 300px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: none;
+}
+
+/* Títulos dos times */
+h2 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+/* Placar principal */
+.score, .set-score {
+    font-size: 150px;
+    font-weight: bold;
+    background: black;
+    color: yellow;
+    padding: 30px;
+    width: 250px;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0px 0px 50px yellow;
+}
+
+/* Placar dos sets */
+.set-score {
+    width: 180px;
+    font-size: 100px;
+}
+
+/* Botões */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+button {
+    font-size: 40px;
+    padding: 15px 30px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    background-color: white;
+    color: black;
+    box-shadow: 0px 0px 10px white;
+}
+
+button:hover {
+    background-color: gray;
+}
+
+/* Botão pequeno */
+.small-btn {
+    font-size: 30px;
+    padding: 10px 20px;
+}
+
+/* Botão de reset */
+.reset-btn {
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+    padding: 10px 20px;
+}
+
+.reset-btn:hover {
+    background-color: darkred;
+}
+
+.small-reset {
+    font-size: 20px;
+    padding: 5px 15px;
+}
+
+/* Sets vencidos */
+.sets-won {
+    font-size: 50px;
+    font-weight: bold;
+    color: cyan;
+    margin-left: 10px;
+}
+
+/* Seção do histórico */
+.history-section {
+    margin-top: 5vh; /* Empurra o botão um pouco mais para baixo */
+}
+
+#toggleHistory {
+    font-size: 2.5rem; /* Botão maior */
+    padding: 15px 30px;
+    background-color: blue;
+    color: white;
+    border-radius: 10px;
+}
+
+#historyContainer {
+    max-height: 50vh; /* Evita que o histórico tome toda a tela */
+    overflow-y: auto;
+    width: 80vw;
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}

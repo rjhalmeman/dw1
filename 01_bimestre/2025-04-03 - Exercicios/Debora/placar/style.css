@@ -1,0 +1,120 @@
+/* Resetando margens e preenchimentos */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: #1a1a2e;
+    color: #ff80ab;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+/* Estilo do placar */
+.scoreboard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.team {
+    margin: 20px;
+    padding: 20px;
+    background: #ff4081;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 64, 129, 0.5);
+    width: 250px;
+}
+
+h1 {
+    font-size: 2rem;
+    color: white;
+}
+
+.score {
+    font-size: 6rem;
+    font-weight: bold;
+    color: white;
+}
+
+p {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    color: white;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+button {
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: white;
+    color: #ff4081;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #ff80ab;
+    color: white;
+}
+
+.reset {
+    margin-top: 20px;
+    background: #d81b60;
+    color: white;
+    font-size: 1.5rem;
+    padding: 10px 20px;
+}
+
+.reset:hover {
+    background: #ff80ab;
+}
+
+/* Linha divisória entre os times */
+.divider {
+    font-size: 4rem;
+    color: white;
+    margin: 0 30px;
+}
+
+/* Histórico de pontos */
+.history-container {
+    width: 90%;
+    max-width: 600px;
+    background: #2a2a4a;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+    text-align: left;
+    max-height: 200px; 
+    overflow-y: auto; /* Faz o histórico rolar automaticamente */
+}
+
+.history-container h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    color: #ff80ab;
+}
+
+#historyList {
+    list-style: none;
+    padding: 0;
+}
+
+#historyList li {
+    padding: 8px;
+    border-bottom: 1px solid #444;
+    font-size: 1.2rem;
+}

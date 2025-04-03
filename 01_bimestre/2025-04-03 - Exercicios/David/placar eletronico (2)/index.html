@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placar Holográfico</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="scoreboard">
+        <div class="team">
+            <input type="text" id="teamNameA" placeholder="Nome do Time A" oninput="updateTeamName('A')">
+            <h2 id="displayTeamA">Time A <span class="sets-won" id="setsWonA">0</span></h2>
+            <div class="score" id="scoreA">00</div>
+            <div class="button-container">
+                <button onclick="increaseScore('A')">+</button>
+                <button onclick="decreaseScore('A')">-</button>
+                <button class="reset-btn" onclick="resetScore('A')">Zerar</button>
+            </div>
+        </div>
+
+        <div class="sets">
+            <h2>Sets</h2>
+            <div class="set-score" id="setScore">0</div>
+            <div class="button-container">
+                <button class="small-btn" onclick="increaseSet('A')">+A</button>
+                <button class="small-btn" onclick="increaseSet('B')">+B</button>
+                <button class="reset-btn small-reset" onclick="resetSet()">Zerar</button>
+            </div>
+        </div>
+
+        <div class="team">
+            <input type="text" id="teamNameB" placeholder="Nome do Time B" oninput="updateTeamName('B')">
+            <h2 id="displayTeamB">Time B <span class="sets-won" id="setsWonB">0</span></h2>
+            <div class="score" id="scoreB">00</div>
+            <div class="button-container">
+                <button onclick="increaseScore('B')">+</button>
+                <button onclick="decreaseScore('B')">-</button>
+                <button class="reset-btn" onclick="resetScore('B')">Zerar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Botão de Histórico logo abaixo dos Sets -->
+    <div class="history-section">
+        <button id="toggleHistory">Ver Histórico</button>
+    </div>
+
+    <div id="historyContainer" class="hidden">
+        <h2>Histórico do Jogo</h2>
+        <ul id="historyList"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

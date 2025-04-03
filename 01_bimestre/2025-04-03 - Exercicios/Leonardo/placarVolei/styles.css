@@ -1,0 +1,118 @@
+body { 
+    font-family: Arial, sans-serif; 
+    text-align: center; 
+    background-color: black;
+    color: white;
+    font-size: 1rem;
+}
+.input-container {
+    margin: 1.25rem;
+}
+input {
+    padding: 0.625rem;
+    margin: 0.3125rem;
+    font-size: 1rem;
+}
+.placar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.25rem;
+    margin-top: 1.25rem;
+    background-color: #222;
+    padding: 1.25rem;
+    border-radius: 0.625rem;
+    width: 90%;
+    max-width: 22rem;
+    margin: auto;
+    position: relative;
+}
+.time {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    padding: 0.625rem;
+    border-radius: 0.3125rem;
+}
+.nome {
+    font-size: 1.125rem;
+    font-weight: bold;
+    margin-bottom: 0.3125rem;
+}
+.pontos {
+    font-size: 3.75rem;
+    font-weight: bold;
+    color: yellow;
+    background-color: black;
+    padding: 0.625rem;
+    width: 5rem;
+    text-align: center;
+    border: 0.125rem solid yellow;
+    border-radius: 0.3125rem;
+}
+.sets-container {
+    position: absolute;
+    top: -2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background-color: #333;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+}
+.sets {
+    font-size: 1.875rem;
+    color: white;
+    font-weight: bold;
+}
+.separador {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+button {
+    margin-top: 0.625rem;
+    padding: 0.625rem;
+    background-color: yellow;
+    color: black;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 0.3125rem;
+}
+button:hover {
+    background-color: orange;
+}
+.historico {
+    margin-top: 1.25rem;
+    text-align: left;
+    padding: 1.25rem;
+}
+.historico table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+.historico th, .historico td {
+    border: 0.1rem solid white;
+    padding: 0.5rem;
+    text-align: center;
+}
+.historico th {
+    background-color: #444;
+}
+.reset-btn {
+    margin-top: 1.25rem;
+    padding: 0.625rem;
+    background-color: red;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 0.3125rem;
+}
+.reset-btn:hover {
+    background-color: darkred;
+}

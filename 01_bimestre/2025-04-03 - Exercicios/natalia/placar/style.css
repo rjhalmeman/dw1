@@ -1,0 +1,157 @@
+/* Resetando margens e padding para um design limpo */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #FEEFF4; /* Tom de rosa muito suave para o fundo */
+    color: #333;
+    text-align: center;
+    padding: 30px;
+}
+
+.container {
+    max-width: 1000px; /* Maior largura para mais espaço */
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    border: 2px solid #D75B8C; /* Bordas finas de tom mais escuro */
+}
+
+h1 {
+    font-size: 3rem; /* Tamanho maior para o título */
+    color: #D75B8C; /* Rosa mais forte para o título */
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+.nomes {
+    margin-bottom: 40px;
+}
+
+input {
+    padding: 12px;
+    margin: 10px;
+    font-size: 20px; /* Fonte maior para os inputs */
+    border: 2px solid #D75B8C;
+    border-radius: 5px;
+    width: 250px;
+    background-color: #F9E0EB;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
+}
+
+input:focus {
+    outline: none;
+    border-color: #F07EA2; /* Tom de rosa mais claro quando o input estiver em foco */
+}
+
+.placar {
+    display: flex;
+    justify-content: space-around;
+    margin: 50px 0;
+    border: 2px solid #D75B8C; /* Bordas finas de tom mais escuro ao redor do placar */
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.time {
+    background-color: #F07EA2; /* Tom de rosa claro para o fundo do placar */
+    padding: 30px;
+    border-radius: 20px;
+    width: 45%; /* Mais espaço entre os times */
+    text-align: center;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    border: 2px solid #D75B8C; /* Bordas finas de tom mais escuro ao redor do placar de cada time */
+}
+
+.pontos {
+    font-size: 100px; /* Tamanho maior para os pontos */
+    font-weight: bold;
+    color: white;
+    margin: 30px 0;
+}
+
+button {
+    margin: 15px;
+    padding: 20px 30px; /* Botões maiores */
+    font-size: 24px; /* Tamanho de fonte maior para os botões */
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    border: 2px solid #D75B8C; /* Bordas finas de tom mais escuro para os botões */
+}
+
+/* Botões de adicionar e remover ponto com cor igual */
+.btnAdicionar, .btnRemover {
+    background-color: #F07EA2; /* Tom de rosa claro para ambos os botões */
+    color: white;
+}
+
+.btnAdicionar:hover, .btnRemover:hover {
+    background-color: #E19BB3; /* Cor mais suave ao passar o mouse */
+    transform: scale(1.1); /* Botões aumentam ao passar o mouse */
+}
+
+/* Efeito de coração para os botões */
+.btnAdicionar::before {
+    content: '♥'; /* Caractere de coração para o botão "+1" */
+    font-size: 35px;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Coração partido para o botão "-1" */
+.btnRemover::before {
+    content: '💔'; /* Coração partido para o botão "-1" */
+    font-size: 35px;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Botão de zerar placar */
+.btnZerar {
+    background-color: #F5A8C1; /* Tom suave de rosa para o botão de zerar */
+    color: white;
+    font-size: 24px;
+    width: 250px; /* Botões mais largos */
+    margin: 15px;
+    border: none;
+    border-radius: 12px;
+}
+
+.btnZerar:hover {
+    background-color: #F26E8E; /* Tom de rosa um pouco mais escuro para hover */
+    transform: scale(1.05); /* Efeito de aumento ao passar o mouse */
+}
+
+/* Estilos para o histórico */
+#historico {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 30px;
+}
+
+#historico li {
+    background-color: #F9E0EB;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid #D75B8C; /* Bordas finas no histórico */
+}
+
+#historico li:nth-child(odd) {
+    background-color: #F7D1E6;
+}

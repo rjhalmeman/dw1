@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placar de Vôlei</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Placar S2</h1>
+
+        <!-- Personalização dos nomes dos times -->
+        <div class="nomes">
+            <label for="time1">Nome do Time 1: </label>
+            <input type="text" id="time1" placeholder="Digite o nome do Time 1">
+            <label for="time2">Nome do Time 2: </label>
+            <input type="text" id="time2" placeholder="Digite o nome do Time 2">
+        </div>
+
+        <!-- Exibição do placar -->
+        <div class="placar">
+            <div class="time">
+                <h2 id="nomeTime1">Time 1</h2>
+                <div id="pontosTime1" class="pontos">0</div>
+                <button class="btnAdicionar" onclick="adicionarPonto('time1')">+1</button>
+                <button class="btnRemover" onclick="removerPonto('time1')">-1</button>
+            </div>
+            <div class="time">
+                <h2 id="nomeTime2">Time 2</h2>
+                <div id="pontosTime2" class="pontos">0</div>
+                <button class="btnAdicionar" onclick="adicionarPonto('time2')">+1</button>
+                <button class="btnRemover" onclick="removerPonto('time2')">-1</button>
+            </div>
+        </div>
+
+        <!-- Botões de controle -->
+        <div class="controle">
+            <button class="btnZerar" onclick="zerarPlacar()">Zerar Placar</button>
+            <button class="btnZerar" onclick="zerarSet()">Zerar Set</button>
+        </div>
+
+        <!-- Histórico de alterações -->
+        <h3>Histórico de Alterações</h3>
+        <ul id="historico"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

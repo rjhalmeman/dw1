@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Placar de Jogo de Rede</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Seção do placar -->
+    <div class="placar">
+      <div class="jogador" id="jogador-1">
+        <input type="text" id="nome-jogador-1" placeholder="Nome do Time 1" />
+        <div id="pontos-jogador-1" class="pontos">0</div>
+        <div class="botoes">
+          <button onclick="aumentarPontos(1)">+1</button>
+          <button onclick="diminuirPontos(1)">-1</button>
+        </div>
+      </div>
+
+      <div class="jogador" id="jogador-2">
+        <input type="text" id="nome-jogador-2" placeholder="Nome do Time 2" />
+        <div id="pontos-jogador-2" class="pontos">0</div>
+        <div class="botoes">
+          <button onclick="aumentarPontos(2)">+1</button>
+          <button onclick="diminuirPontos(2)">-1</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Seção dos Sets -->
+    <div id="sets">
+      <div class="set-container">
+        <div class="set">
+          <div class="set-numeros">
+              <div class="set-botoes">
+                  <button onclick="aumentarSet(1)">+1</button>
+                  <button onclick="diminuirSet(1)">-1</button>
+                </div>
+                <span id="set-1">0</span>
+          </div>
+        </div>
+        <div class="set">
+          <div class="set-numeros">
+            <span id="set-2">0</span>
+            <div class="set-botoes">
+              <button onclick="aumentarSet(2)">+1</button>
+              <button onclick="diminuirSet(2)">-1</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Botão para zerar -->
+    <div class="actions">
+      <button onclick="zerarPontos()">Zerar Placar</button>
+    </div>
+
+    <!-- Seção do Histórico -->
+    <div id="historico">
+      <h2>Histórico de Alterações</h2>
+      <ul id="historico-lista"></ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

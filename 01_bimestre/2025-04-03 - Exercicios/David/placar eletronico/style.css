@@ -1,0 +1,105 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: black;
+    color: white;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.scoreboard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+
+.team, .sets {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.score, .set-score {
+    font-size: 150px;
+    font-weight: bold;
+    background: black;
+    color: yellow;
+    padding: 30px;
+    width: 250px;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0px 0px 50px yellow;
+}
+
+.set-score {
+    width: 180px;
+    font-size: 100px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+button {
+    font-size: 40px;
+    padding: 15px 30px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    background-color: white;
+    color: black;
+    box-shadow: 0px 0px 10px white;
+}
+
+button:hover {
+    background-color: gray;
+}
+
+.small-btn {
+    font-size: 30px;
+    padding: 10px 20px;
+}
+
+.reset-btn {
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+    padding: 10px 20px;
+}
+
+.reset-btn:hover {
+    background-color: darkred;
+}
+
+.small-reset {
+    font-size: 20px;
+    padding: 5px 15px;
+}
+.sets-won {
+    font-size: 50px;
+    font-weight: bold;
+    color: cyan;
+    margin-left: 10px;
+}
+input {
+    font-size: 25px;
+    text-align: center;
+    width: 300px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: none;
+}

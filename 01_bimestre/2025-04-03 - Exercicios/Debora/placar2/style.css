@@ -1,0 +1,170 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: #1a1a2e;
+    color: #ff80ab;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.scoreboard {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    max-width: 1200px;
+    padding: 20px;
+    background: #ff4081;
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px rgba(255, 64, 129, 0.5);
+}
+
+.team {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.score {
+    font-size: 8rem;
+    font-weight: bold;
+    color: white;
+    background: #d81b60;
+    padding: 20px 40px;
+    border-radius: 20px;
+    width: 200px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.reset {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    background: white;
+    color: #d81b60;
+}
+
+.reset-set {
+    font-size: 1rem;
+    padding: 8px 15px;
+    background: white;
+    color: #d81b60;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.reset-set:hover {
+    background: #ff4081;
+    color: white;
+}
+
+/* Estiliza o contador de sets */
+.set-counter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #ff80ab;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 128, 171, 0.5);
+    width: 180px;
+}
+
+.set-counter h2 {
+    font-size: 1.5rem;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.set-number {
+    font-size: 4rem;
+    font-weight: bold;
+    color: white;
+    background: #d81b60;
+    padding: 10px 20px;
+    border-radius: 10px;
+    width: 100px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Histórico de pontos */
+.history-container {
+    margin-top: 20px;
+    padding: 15px;
+    background: #ff4081;
+    border-radius: 10px;
+    max-width: 80%;
+    text-align: left;
+    overflow-y: auto;
+    max-height: 200px;
+}
+
+.history-container h2 {
+    font-size: 1.5rem;
+    color: white;
+}
+
+#historyList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+#historyList li {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 5px;
+    margin: 5px 0;
+    border-radius: 5px;
+    color: white;
+    font-size: 1rem;
+}
+
+/* Estiliza o nome do time para parecer editável */
+.team-name {
+    font-size: 2rem;
+    color: white;
+    border-bottom: 2px dashed rgba(255, 255, 255, 0.5);
+    cursor: text;
+    outline: none;
+    transition: border-bottom 0.3s ease;
+}
+
+.team-name:hover {
+    border-bottom: 2px dashed white;
+}

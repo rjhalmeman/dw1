@@ -1,0 +1,219 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    overflow-y: auto; /* Permite rolar a tela */
+    padding: 2vh 0; /* Adicionando um pequeno espaçamento nas laterais */
+  }
+  
+  .container {
+    text-align: center;
+    background-color: #fff;
+    padding: 4vh;
+    border-radius: 2vh;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 1200px;
+    height: auto; /* Deixa a altura ajustável conforme o conteúdo */
+    overflow: hidden; /* Impede o transbordamento dentro da div */
+  }
+  
+  .placar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5vh;
+  }
+  
+  .jogador {
+    width: 45%;
+    text-align: center;
+    padding: 2vh;
+    background-color: #e2e2e2;
+    border-radius: 2vh;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  #jogador-1 {
+    background-color: #FF6F61;
+    color: white;
+  }
+  
+  #jogador-2 {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  input[type="text"] {
+    font-size: 4vh;
+    padding: 2vh;
+    margin-bottom: 2vh;
+    width: 90%;
+    border-radius: 2vh;
+    border: 2px solid #ccc;
+    text-align: center;
+  }
+  
+  .pontos {
+    font-size: 27vh; /* Aumentando ainda mais o tamanho do placar para 18vh */
+    font-weight: bold;
+    color: #333;
+    margin: 4vh 0;
+  }
+  
+  .botoes {
+    display: flex;
+    justify-content: center;
+    gap: 3vw;
+  }
+  
+  button {
+    padding: 2vh 4vh;
+    font-size: 3vh;
+    cursor: pointer;
+    border: none;
+    background-color: #333;
+    color: white;
+    border-radius: 2vh;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #555;
+  }
+  
+  #sets {
+    margin-top: 5vh;
+  }
+  
+  .set-container {
+    display: flex;
+    justify-content: center;
+    gap: 5vw;
+  }
+  
+  .set {
+    text-align: center;
+  }
+  
+  .set-numeros {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2vh;
+  }
+  
+  .set span {
+    font-size: 8vh; /* Aumentando o tamanho dos números dos sets */
+    font-weight: bold;
+    color: #333;
+    width: 15vh;
+    height: 15vh;
+    background-color: #f1f1f1;
+    border-radius: 2vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #ccc;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .set-botoes {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+  }
+  
+  .set-botoes-left {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    align-items: flex-start; /* Alinha os botões à esquerda */
+  }
+  
+  .set-botoes-right {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    align-items: flex-end; /* Alinha os botões à direita */
+  }
+  
+  .actions {
+    margin-top: 5vh;
+  }
+  
+  button[type="button"] {
+    background-color: #E91E63;
+    font-size: 3vh;
+    padding: 3vh 6vh;
+    margin-top: 5vh;
+    width: 30vw;
+    border-radius: 2vh;
+    cursor: pointer;
+    color: white;
+    border: none;
+  }
+  
+  button[type="button"]:hover {
+    background-color: #d81b60;
+  }
+  
+  #historico {
+    margin-top: 5vh;
+    text-align: left;
+    font-size: 2.5vh;
+    color: #333;
+    max-height: 25vh; /* Altura máxima ajustada para histórico dentro da div */
+    overflow-y: auto; /* Permite rolar se o histórico for grande */
+    padding: 2vh;
+    border: 2px solid #ccc;
+    border-radius: 2vh;
+    background-color: #fafafa;
+  }
+  
+  #historico h2 {
+    font-size: 3.5vh;
+    margin-bottom: 2vh;
+  }
+  
+  #historico ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  #historico li {
+    margin: 1vh 0;
+  }
+  
+  @media (max-width: 800px) {
+    .container {
+      width: 90%;
+      padding: 4vh;
+    }
+  
+    .pontos {
+      font-size: 12vh; /* Ajuste para dispositivos menores */
+    }
+  
+    button {
+      padding: 2vh 4vh;
+      font-size: 2.5vh;
+    }
+  
+    #sets {
+      font-size: 5vh;
+    }
+  
+    #historico {
+      font-size: 2vh;
+    }
+  }
+  

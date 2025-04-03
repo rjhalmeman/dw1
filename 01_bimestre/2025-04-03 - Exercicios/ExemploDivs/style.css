@@ -1,15 +1,19 @@
-#primeiraLinha{
-    background-color:aqua;
-}
-
-#segundaLinha{
-    background-color:chocolate;
-
-}
-
-#umaPalavra{
-    color: blue;
-}
 body{
-    display:flex;
+    background-color: blueviolet;
+}
+
+h1{
+    color: white;
+}
+
+.divPrimeira{
+    background-color: blue;
+}
+
+#divSegunda{
+    background-color: yellow;
+}
+
+#palavrinha{
+    color:red;
 }
