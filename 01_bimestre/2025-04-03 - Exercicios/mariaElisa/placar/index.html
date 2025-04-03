@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placar de Pontuação</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+     <div class="placar">
+        <h1>Placar Super Top</h1>
+    </div>
+
+    <div class="container">
+        <div class="team" id="teamA">
+            <h2 contenteditable="true">Time A</h2>
+            <p class="points" id="pointsA">0</p>
+            <button onclick="addPoint('A')">+1</button>
+            <button onclick="removePoint('A')">-1</button>
+        </div>
+        
+        <div class="sets">
+            <h3>Sets</h3>
+            <p id="setsA">0</p>
+            <p>x</p>
+            <p id="setsB">0</p>
+        </div>
+        
+        <div class="team" id="teamB">
+            <h2 contenteditable="true">Time B</h2>
+            <p class="points" id="pointsB">0</p>
+            <button onclick="addPoint('B')">+1</button>
+            <button onclick="removePoint('B')">-1</button>
+        </div>
+    </div>
+    
+    <button onclick="resetGame()" class="reset">Zerar Placar</button>
+    
+    <h3>Histórico de Pontuação</h3>
+    <ul id="history"></ul>
+    <script defer src="control.js"></script>
+</body>
+</html>

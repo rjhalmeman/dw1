@@ -1,0 +1,104 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e0f7fa;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+.placar {
+    background-color: #00838f;
+    color: #e0f7fa;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.team {
+    background-color: #00bcd4;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    min-width: 150px;
+}
+
+.sets {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.points {
+    font-size: 50px;
+    margin: 10px 0;
+}
+
+button {
+    background-color: #00838f;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #005662;
+}
+
+.reset {
+    background-color: #f57c00;
+}
+
+.reset:hover {
+    background-color: #e65100;
+}
+
+h3 {
+    color: #006064;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+
+.winner {
+    transform: scale(1.2);
+    transition: transform 0.5s ease-in-out;
+    background-color: #4CAF50 !important; 
+}
+
+.loser {
+    opacity: 0.5;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Confetes */
+
+.confetti {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-100vh) rotate(0deg);
+    }
+    100% {
+        transform: translateY(100vh) rotate(720deg);
+    }
+}
+
