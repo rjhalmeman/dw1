@@ -1,0 +1,15 @@
+#primeiraLinha{
+    background-color:aqua;
+}
+
+#segundaLinha{
+    background-color:chocolate;
+
+}
+
+#umaPalavra{
+    color: blue;
+}
+body{
+    display:flex;
+}
