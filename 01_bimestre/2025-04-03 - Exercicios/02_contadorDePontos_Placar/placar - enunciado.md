@@ -14,3 +14,6 @@ Funcionalidades a serem implementadas
 
 Objetivo
  - usar Seletor de ID (#id), Seletor de elemento (h1, p, div, etc.) e Seletor de classe (.classe).
+
+
+ mudei algo
