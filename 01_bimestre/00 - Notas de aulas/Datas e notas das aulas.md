@@ -48,6 +48,8 @@ Navegando no sistema de pastas
 cd
 cd ..
 
+Estrutura de diretórios (pastas). Entender como funcionam os caminhos é essencial para organização de código e para referenciar arquivos (documentos) externos.
+
 Exercício feito em sala
 https://github.com/rjhalmeman/dw1/tree/main/01_bimestre/2025-04-01%20-%20Imagens
 
