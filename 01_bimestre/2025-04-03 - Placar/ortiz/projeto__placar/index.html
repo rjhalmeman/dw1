@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container__inputs">
+        <input type="text" id="time1__input" placeholder="Registre seu primeiro time">
+        <input type="text" id="time2__input"  placeholder="Registre seu segundo time">
+        <div class="button__envio">
+            <button class="envio">enviar</button>
+        </div>
+    </div>
+    <h1 class="titulo">placar</h1>
+
+    <div class="placar__container">
+       
+        <div class="placar__time">
+            <div class="times">
+                <p class="time__escolhido"><span id="time1">time:</span></p>
+                <span class="placar primeiro">00</span>
+            </div>
+        <div class="placar__sets">
+
+                <span class="sets">0</span>
+            </div>
+
+        </div>
+        <div>
+            <p>
+                X
+            </p>
+        </div>
+        <div class="placar__time">
+
+            <div class="placar__sets">
+                <span class="sets">0</span>
+            </div>
+            <div class="times">
+                <p class="time__escolhido"><span id="time2">time:</span></p>
+                <span class="placar segundo">00</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="placar__de__pontos">
+        <div class="placar__botoes">
+            <button class="somar">+</button>
+            <button class="subtrair">-</button>
+        </div>
+        <div class="placar__botoes">
+            <button class="somar">+</button>
+            <button class="subtrair">-</button>
+        </div>
+    </div>
+    <div class="botoes__de__config">
+        <button id="zerarPontuacao" class="button__config"> Zerar pontuação</button>
+        <button id="visualizarHistorico"  class="button__config">Ver histórico</button>
+        <button id="Limparhistorico"  class="button__config">Limpar historico</button>
+    </div>
+    <ul class="historico">
+        <h1 class="titulo__lista">historico de partidas</h1>
+        <ul></ul>
+        <ul></ul>
+        <ul></ul>
+        <ul></ul>
+        <ul></ul>
+        <ul></ul>
+        <ul></ul>
+        <ul></ul>
+        <ul></ul>
+        <ul></ul>
+        <ul></ul>
+        <ul></ul>
+        <ul></ul>
+        <ul></ul>
+        <ul></ul>
+        <ul></ul>
+        <ul></ul>
+        <ul></ul>
+        <ul></ul>
+        <ul></ul>
+        <ul></ul>
+        <ul></ul>
+        <ul></ul>
+        <ul></ul>
+        <ul></ul>
+        <ul></ul>
+        <ul></ul>
+        <ul></ul>
+        <ul></ul>
+        <ul></ul>
+    </ul>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>

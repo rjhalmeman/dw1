@@ -1,0 +1,97 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#container {
+    text-align: center;
+    border: 2px solid #333;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 600px; /* Largura aumentada para acomodar o placar maior */
+}
+
+h1 {
+    font-size: 36px; /* Aumentando o tamanho da fonte do título */
+    margin-bottom: 20px;
+}
+
+#jogo {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-size: 24px; /* Aumentando o tamanho da fonte dos times */
+}
+
+#time1, #time2 {
+    width: 180px; /* Ajustando a largura para o texto maior */
+}
+
+h2 {
+    font-size: 28px; /* Aumentando o tamanho da fonte do nome dos times */
+}
+
+#pontosTime1, #pontosTime2 {
+    font-size: 48px; /* Aumentando o tamanho da fonte dos pontos */
+    font-weight: bold;
+    color: #333;
+}
+
+button {
+    margin-top: 10px;
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px; /* Aumentando o tamanho da fonte dos botões */
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#sets {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    font-size: 28px; /* Aumentando o tamanho da fonte dos sets */
+}
+
+#historico {
+    margin-bottom: 20px;
+}
+
+#controle {
+    margin-top: 20px;
+}
+
+ul {
+    text-align: left;
+    list-style-type: none;
+    padding-left: 0;
+    font-size: 18px; /* Aumentando o tamanho da fonte do histórico */
+}
+
+input[type="text"] {
+    font-size: 18px;
+    padding: 8px;
+    width: 250px;
+    margin: 5px;
+}
+
+#nomesTimes {
+    margin-bottom: 20px;
+}
+
+#controle button {
+    margin: 5px;
+}

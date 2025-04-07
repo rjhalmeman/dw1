@@ -1,0 +1,63 @@
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Controle de Placar</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Controle de Placar</h1>
+
+    <div class="team-names">
+      <input type="text" id="team1Name" placeholder="Nome do Time 1" />
+      <input type="text" id="team2Name" placeholder="Nome do Time 2" />
+    </div>
+
+    <div class="sets-config">
+      <label for="setsToWin">Formato da partida:</label>
+      <select id="setsToWin">
+        <option value="2">Melhor de 3</option>
+        <option value="3" selected>Melhor de 5</option>
+      </select>
+    </div>
+
+    <div class="placar">
+      <div id="team1" class="team-box">
+        <h2 id="team1Display">Equipe 1</h2>
+        <div id="pointsTeam1">0</div>
+        <div class="buttons">
+          <button class="btn" onclick="addPoint(1)">+</button>
+          <button class="btn" onclick="subtractPoint(1)">-</button>
+        </div>
+      </div>
+
+      <div id="sets" class="sets-box">
+        <h2>Sets</h2>
+        <p id="setsText">0 x 0</p>
+      </div>
+
+      <div id="team2" class="team-box">
+        <h2 id="team2Display">Equipe 2</h2>
+        <div id="pointsTeam2">0</div>
+        <div class="buttons">
+          <button class="btn" onclick="addPoint(2)">+</button>
+          <button class="btn" onclick="subtractPoint(2)">-</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="historico">
+      <h2>Histórico de Pontos</h2>
+      <ul id="historyList"></ul>
+    </div>
+
+    <div id="gameStatus">
+      <p id="statusText">Jogo em andamento...</p>
+      <button class="btn" id="restartBtn" onclick="restartGame()">Reiniciar Jogo</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

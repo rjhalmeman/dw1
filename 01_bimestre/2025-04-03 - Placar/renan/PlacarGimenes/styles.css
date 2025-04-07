@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eef;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    width: 90%;
+    max-width: 700px;
+    text-align: center;
+}
+
+.team-names input {
+    width: 45%;
+    padding: 10px;
+    margin: 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+.sets-config {
+    margin: 20px 0;
+}
+
+.sets-config input {
+    width: 60px;
+    padding: 6px;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 6px;
+    border: 1px solid #aaa;
+}
+
+.placar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.team-box, .sets-box {
+    padding: 20px;
+    border-radius: 10px;
+    background: #f5f5f5;
+    width: 30%;
+}
+
+#pointsTeam1, #pointsTeam2 {
+    font-size: 48px;
+    margin: 15px 0;
+    font-weight: bold;
+}
+
+.buttons button {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    margin: 0 5px;
+    border: none;
+    border-radius: 8px;
+    background-color: #0077b6;
+    color: white;
+    cursor: pointer;
+}
+
+.buttons button:hover {
+    background-color: #005f87;
+}
+
+#setsText {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.historico {
+    text-align: left;
+    max-height: 200px;
+    overflow-y: auto;
+    margin-top: 20px;
+}
+
+#historyList li {
+    margin: 5px 0;
+    padding: 8px;
+    background: #eee;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+#restartBtn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    display: none;
+}
+
+#restartBtn:hover {
+    background-color: #c9302c;
+}

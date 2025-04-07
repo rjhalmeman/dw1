@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placar de Vôlei</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="title">Placar de Vôlei</h1>
+
+        <!-- Inputs para os nomes dos times -->
+        <div id="nomesTimes">
+            <div>
+                <label for="nomeTimeA">Nome do Time A:</label>
+                <input type="text" id="nomeTimeA" placeholder="Nome do Time A" oninput="atualizarNomes()">
+            </div>
+            <div>
+                <label for="nomeTimeB">Nome do Time B:</label>
+                <input type="text" id="nomeTimeB" placeholder="Nome do Time B" oninput="atualizarNomes()">
+            </div>
+        </div>
+
+        <div id="placar">
+            <div class="time" id="timeA">
+                <h2 id="timeA_nome">Time A</h2>
+                <p id="pontosA">0</p>
+                <button onclick="adicionarPonto('A')">Adicionar Ponto</button>
+                <button onclick="removerPonto('A')">Remover Ponto</button>
+            </div>
+
+            <div class="time" id="timeB">
+                <h2 id="timeB_nome">Time B</h2>
+                <p id="pontosB">0</p>
+                <button onclick="adicionarPonto('B')">Adicionar Ponto</button>
+                <button onclick="removerPonto('B')">Remover Ponto</button>
+            </div>
+        </div>
+
+        <div id="sets">
+            <h3>Sets</h3>
+            <p id="setsTexto">Set 1</p>
+        </div>
+
+        <div id="vencedor"></div> <!-- Exibe quem venceu -->
+
+        <button onclick="zerarPlacar()">Zerar Placar</button>
+
+        <div id="historico">
+            <h3>Histórico de Pontos</h3>
+            <ul id="listaHistorico"></ul>
+        </div>
+    </div>
+
+    <script>
+        let pontosA = 0;
+        let pontosB = 0;
+        let setsA = 0;
+        let setsB = 0;
+        let setAtual = 1;
+        let historico = [];
+
+        function atualizarPlacar() {
+            // Atualiza os pontos de cada time
+            document.getElementById('pontosA').textContent = pontosA;
+            document.getElementById('pontosB').textContent = pontosB;
+
+            // Atualiza o texto de sets
+            document.getElementById('setsTexto').textContent = `Set ${setAtual}`;
+
+            // Atualiza o histórico
+            exibirHistorico();
+        }
+
+        function adicionarPonto(time) {
+            if (time === 'A') {
+                pontosA++;
+            } else if (time === 'B') {
+                pontosB++;
+            }
+
+            // Verifica se houve um vencedor de set
+            verificarVencedorSet();
+            atualizarPlacar();
+            registrarHistorico(time, 'ponto');
+        }
+
+        function removerPonto(time) {
+            if (time === 'A' && pontosA > 0) {
+                pontosA--;
+            } else if (time === 'B' && pontosB > 0) {
+                pontosB--;
+            }
+
+            atualizarPlacar();
+            registrarHistorico(time, 'remover ponto');
+        }
+
+        function zerarPlacar() {
+            pontosA = 0;
+            pontosB = 0;
+            setAtual = 1;
+            setsA = 0;
+            setsB = 0;
+            historico = [];
+            atualizarPlacar();
+            document.getElementById('vencedor').style.display = 'none'; // Limpa a mensagem do vencedor
+        }
+
+        function verificarVencedorSet() {
+            if (pontosA >= 25 && pontosA - pontosB >= 2) {
+                setsA++;
+                pontosA = 0;
+                pontosB = 0;
+                setAtual++;
+                if (setsA === 3) {
+                    // Exibe o nome do vencedor (Time A)
+                    const nomeTimeA = document.getElementById('nomeTimeA').value || 'Time A';
+                    document.getElementById('vencedor').textContent = `${nomeTimeA} GANHOU!!!!`;
+                    document.getElementById('vencedor').style.display = 'block'; // Torna a mensagem visível
+                }
+            } else if (pontosB >= 25 && pontosB - pontosA >= 2) {
+                setsB++;
+                pontosA = 0;
+                pontosB = 0;
+                setAtual++;
+                if (setsB === 3) {
+                    // Exibe o nome do vencedor (Time B)
+                    const nomeTimeB = document.getElementById('nomeTimeB').value || 'Time B';
+                    document.getElementById('vencedor').textContent = `${nomeTimeB} GANHOU!!!!`;
+                    document.getElementById('vencedor').style.display = 'block'; // Torna a mensagem visível
+                }
+            }
+        }
+
+        function registrarHistorico(time, acao) {
+            const dataHora = new Date();
+            const dataFormatada = dataHora.toLocaleString();
+            const historicoItem = `${dataFormatada} - ${acao} - ${time}`;
+            historico.push(historicoItem);
+        }
+
+        function exibirHistorico() {
+            const listaHistorico = document.getElementById('listaHistorico');
+            listaHistorico.innerHTML = '';
+            historico.forEach(item => {
+                const li = document.createElement('li');
+                li.textContent = item;
+                listaHistorico.appendChild(li);
+            });
+        }
+
+        // Função para atualizar os nomes dos times conforme a pessoa digita
+        function atualizarNomes() {
+            const nomeTimeA = document.getElementById('nomeTimeA').value || "Time A";
+            const nomeTimeB = document.getElementById('nomeTimeB').value || "Time B";
+
+            document.getElementById('timeA_nome').textContent = nomeTimeA;
+            document.getElementById('timeB_nome').textContent = nomeTimeB;
+        }
+    </script>
+</body>
+</html>
+
