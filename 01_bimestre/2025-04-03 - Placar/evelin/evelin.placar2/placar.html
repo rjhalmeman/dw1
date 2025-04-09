@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placar de Beach Tennis</title>
+    <link rel="stylesheet" href="placar.css">
+    <!-- Adicionar o script de confetes -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+    <div id="container">
+        <h1 id="placar">Placar de Beach Tennis</h1>
+        
+        <!-- Formulário para inserir os nomes dos times -->
+        <div id="nomesTimes">
+            <label for="nomeTime1">Nome do Time 1: </label>
+            <input type="text" id="nomeTime1" placeholder="Digite o nome do Time 1">
+            <br>
+            <label for="nomeTime2">Nome do Time 2: </label>
+            <input type="text" id="nomeTime2" placeholder="Digite o nome do Time 2">
+            <button id="definirNomes" class="botao">Definir Nomes</button>
+        </div>
+
+        <div id="placarArea">
+            <div id="time1">
+                <h2 id="nomeTime1Exibido">Time 1</h2>
+                <div class="pontos">
+                    <span id="pontosTime1">0</span>
+                </div>
+                <button id="adicionarTime1" class="botao">Adicionar ponto</button>
+            </div>
+
+            <div id="placarSeparador">
+                <div id="sets">
+                    <div><span id="setTime1">0</span> Set</div>
+                    <div><span id="setTime2">0</span> Set</div>
+                </div>
+                <div><strong>Placar</strong></div>
+            </div>
+
+            <div id="time2">
+                <h2 id="nomeTime2Exibido">Time 2</h2>
+                <div class="pontos">
+                    <span id="pontosTime2">0</span>
+                </div>
+                <button id="adicionarTime2" class="botao">Adicionar ponto</button>
+            </div>
+        </div>
+
+        <div id="historico">
+            <h3>Histórico de pontos</h3>
+            <ul id="listaHistorico"></ul>
+        </div>
+        <button id="apagarHistorico" class="botao">Apagar Histórico</button>
+
+        <div id="controle">
+            <button id="zerarPlacar" class="botao">Zerar Placar</button>
+            <button id="retrocederPonto" class="botao">Retroceder Ponto</button>
+        </div>
+
+        <!-- Troféu e Confetes -->
+        <div id="vitoria" style="display: none;">
+            <h2 id="vitoriaTexto"></h2>
+            <img id="trofeu" src="https://img.icons8.com/ios-filled/50/000000/trophy.png" alt="Troféu" style="width: 100px;">
+        </div>
+    </div>
+
+    <script src="placar.js"></script>
+</body>
+</html>

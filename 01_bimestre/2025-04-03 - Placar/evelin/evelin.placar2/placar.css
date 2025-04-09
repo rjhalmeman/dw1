@@ -1,0 +1,118 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#container {
+    text-align: center;
+    border: 2px solid #333;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    width: 800px;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #FF69B4; /* Cor rosa */
+    font-weight: bold;
+}
+
+#nomesTimes {
+    margin-bottom: 30px;
+}
+
+#nomesTimes input {
+    padding: 8px;
+    font-size: 16px;
+    width: 200px;
+}
+
+button {
+    margin-top: 10px;
+    padding: 15px;
+    background-color: #FF69B4;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 18px;
+}
+
+button:hover {
+    background-color: #FF1493;
+}
+
+#placarArea {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+#time1, #time2 {
+    width: 200px;
+    padding: 10px;
+    text-align: center;
+}
+
+#time1 h2, #time2 h2 {
+    font-size: 28px;
+    color: #333;
+}
+
+.pontos {
+    font-size: 64px;
+    font-weight: bold;
+    color: #FF69B4;
+    margin: 10px 0;
+}
+
+#placarSeparador {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#sets {
+    font-size: 24px;
+    color: #333;
+}
+
+#historico {
+    margin-top: 20px;
+}
+
+#historico ul {
+    text-align: left;
+    list-style-type: none;
+    padding-left: 0;
+    font-size: 18px;
+}
+
+#controle button {
+    font-size: 16px;
+    padding: 10px 20px;
+    margin: 10px;
+}
+
+#vitoria {
+    margin-top: 30px;
+    font-size: 24px;
+    color: #FF69B4;
+    display: none;
+}
+
+#trofeu {
+    margin-top: 15px;
+    width: 100px;
+}
