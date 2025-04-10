@@ -1,4 +1,4 @@
-# DW1 - Desenvolvimento WEB 1
+## DW1 - Desenvolvimento WEB 1
 
 
 
@@ -76,6 +76,14 @@ Enviar dados de uma página para outra.
 ## 10/04/2025 - qui
 Terminologia. Uso de IA generativa de forma produtiva. CSS e JS.
 
+Múltiplas páginas
+
+
+
+
+
+
+
 ## 15/04/2025 - ter
 Exercícios. Construção de prompts.
 
@@ -96,5 +104,4 @@ seletores de classe
 
 ## 08/05/2025 - qui
 Avaliação 1º Bimestre
-
 

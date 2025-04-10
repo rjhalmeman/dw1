@@ -10,7 +10,7 @@
 <body>
   <h2>Página 1 - Formulário</h2>
   <form onsubmit="acaoFormulario(event)">
-    <button type="submit">Tornar azul</button>
+    <button type="submit">Tornar pink</button>
     <button type="button" onclick="voltar()">Voltar</button>
   </form>
 
@@ -18,7 +18,7 @@
     function acaoFormulario(event) {
       event.preventDefault(); //não deixa mudar de página
       // Muda a cor de fundo para azul claro
-      document.body.style.backgroundColor = 'blue';
+      document.body.style.backgroundColor = 'pink';
       //alert("Ação da Página 1 confirmada!");
     }
 
