@@ -1,0 +1,29 @@
+
+body {
+  background-color: aquamarine;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.painel {
+  width: 50%;
+  border: double 4px black;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+label, input {
+  display: block;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+input[type="submit"] {
+  width: auto;
+  padding: 10px 20px;
+  cursor: pointer;
+}

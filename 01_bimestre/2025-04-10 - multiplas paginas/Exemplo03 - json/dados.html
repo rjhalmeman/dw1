@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dados Recebidos</title>
+ <link rel="stylesheet" href="styleDados.css">
+</head>
+<body>
+  <div class="painel">
+    <h2>Dados Recebidos (JSON)</h2>
+    <pre id="jsonDados"></pre>
+  </div>
+
+  <script>
+    const dados = sessionStorage.getItem('dadosForm');
+    if (dados) {
+      document.getElementById('jsonDados').textContent = dados;
+    } else {
+      document.getElementById('jsonDados').textContent = 'Nenhum dado encontrado.';
+    }
+  </script>
+</body>
+</html>

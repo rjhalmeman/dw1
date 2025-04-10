@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Página 2</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <h2>Página 2 - Formulário</h2>
+  <form onsubmit="acaoFormulario(event)">
+    <button type="submit">Tornar vermelho</button>
+    <button type="button" onclick="voltar()">Voltar</button>
+  </form>
+
+  <script>
+    function acaoFormulario(event) {
+      event.preventDefault();
+      // Muda a cor de fundo 
+      document.body.style.backgroundColor = 'red';
+      //alert("Tarefa da Página 2 executada!");
+    }
+
+    function voltar() {
+      window.location.href = 'index.html';
+    }
+  </script>
+</body>
+
+</html>

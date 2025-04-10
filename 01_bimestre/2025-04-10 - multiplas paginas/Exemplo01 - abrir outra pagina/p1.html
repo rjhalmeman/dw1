@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Página 1</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <h2>Página 1 - Formulário</h2>
+  <form onsubmit="acaoFormulario(event)">
+    <button type="submit">Tornar azul</button>
+    <button type="button" onclick="voltar()">Voltar</button>
+  </form>
+
+  <script>
+    function acaoFormulario(event) {
+      event.preventDefault(); //não deixa mudar de página
+      // Muda a cor de fundo para azul claro
+      document.body.style.backgroundColor = 'blue';
+      //alert("Ação da Página 1 confirmada!");
+    }
+
+    function voltar() {
+      window.location.href = 'index.html';
+    }
+  </script>
+</body>
+
+</html>

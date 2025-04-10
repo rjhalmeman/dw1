@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Formulário</title>
+ <link rel="stylesheet" href="styleIndex.css">
+</head>
+<body>
+  <div class="painel">
+    <form id="formulario">
+      <label for="cpf">CPF:</label>
+      <input type="text" id="cpf" name="cpf" required />
+
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" required />
+
+      <label for="dataNascimento">Data de Nascimento:</label>
+      <input type="date" id="dataNascimento" name="dataNascimento" required />
+
+      <input type="submit" value="Enviar" />
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('formulario').addEventListener('submit', function (e) {
+      
+      e.preventDefault(); //não deixa mudar de página
+
+      const dados = { //prepara o "pacote json para ser enviado"
+        cpf: document.getElementById('cpf').value,
+        nome: document.getElementById('nome').value,
+        dataNascimento: document.getElementById('dataNascimento').value
+      };
+
+      // Passar o JSON pela sessionStorage
+      sessionStorage.setItem('dadosForm', JSON.stringify(dados));
+
+      // Redireciona para a segunda página
+      window.location.href = 'dados.html';
+    });
+  </script>
+</body>
+</html>
