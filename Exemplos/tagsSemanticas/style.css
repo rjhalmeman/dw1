@@ -1,0 +1,68 @@
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Estilização das tags semânticas */
+header {
+  background-color: #f4a261;
+  padding: 20px;
+  color: white;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+main {
+  background-color: #e9c46a;
+  padding: 20px;
+}
+
+section {
+  background-color: #2a9d8f;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  color: white;
+}
+
+article {
+  background-color: #264653;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  color: white;
+}
+
+aside {
+  background-color: #8ab17d;
+  padding: 15px;
+  margin: 20px;
+  border-radius: 5px;
+  color: white;
+}
+
+footer {
+  background-color: #e76f51;
+  padding: 20px;
+  text-align: center;
+  color: white;
+  margin-top: 30px;
+}
