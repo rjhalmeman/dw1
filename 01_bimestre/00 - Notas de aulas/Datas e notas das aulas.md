@@ -85,6 +85,8 @@ Múltiplas páginas
 
 ## [Tags semânticas (estruturantes)](https://github.com/rjhalmeman/dw1/blob/main/00_Teoria/tags-semanticas-html.md)
 
+
+
 ... longa conversa sobre avaliação
 
 ## 17/04/2025 - qui
