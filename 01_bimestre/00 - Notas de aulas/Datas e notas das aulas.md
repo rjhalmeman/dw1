@@ -79,7 +79,7 @@ Múltiplas páginas
 
 
 
-## 15/04/2025 - ter
+## [15/04/2025 - ter](https://github.com/rjhalmeman/dw1/tree/main/01_bimestre/2025-04-15%20-%20tags%20semanticas)
 
 ## 📺 [Wireframes](https://www.youtube.com/watch?v=INPlcg_BsGc)
 
@@ -89,10 +89,10 @@ Múltiplas páginas
 
 ... longa conversa sobre avaliação
 
-## 17/04/2025 - qui
+## [17/04/2025 - qui]()
 Seletores CSS
 
-## 22/04/2025 - ter
+[## 22/04/2025 - ter]()
 Exercícios com seletores css
 ## 📺 [Front-end, back-end e full-stack](https://www.youtube.com/watch?v=bnoXykE_ng0)
 
