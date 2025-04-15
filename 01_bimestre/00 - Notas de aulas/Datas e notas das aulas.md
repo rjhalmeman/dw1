@@ -60,8 +60,7 @@ Exercícios
 
 ## 08/04/2025 - ter
 
-Iniciantes (código fonte tv)
-https://www.youtube.com/watch?v=3-3lTJlBU78
+## 📺 [Iniciantes (código fonte tv)](https://www.youtube.com/watch?v=3-3lTJlBU78)
 
 ![alt text](./imagens/cap3LivroProgramadorPragmatico.png)
 
@@ -80,18 +79,20 @@ Múltiplas páginas
 
 
 
-
-
-
-
 ## 15/04/2025 - ter
-Exercícios. Construção de prompts.
+
+## 📺 [Wireframes](https://www.youtube.com/watch?v=INPlcg_BsGc)
+
+## [Tags semânticas (estruturantes)](https://github.com/rjhalmeman/dw1/blob/main/00_Teoria/tags-semanticas-html.md)
+
+... longa conversa sobre avaliação
 
 ## 17/04/2025 - qui
 Seletores CSS
 
 ## 22/04/2025 - ter
 Exercícios com seletores css
+## 📺 [Front-end, back-end e full-stack](https://www.youtube.com/watch?v=bnoXykE_ng0)
 
 ## 24/04/2025 - qui
 Seletor de elementos
