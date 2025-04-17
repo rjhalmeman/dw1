@@ -1,0 +1,113 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background: black;
+    font-family: sans-serif;
+    color: white;
+}
+
+.linha {
+    display: flex;
+    flex: 1;
+}
+
+.linha1 .coluna {
+    flex: 1;
+}
+
+.linha2 .coluna {
+    flex: 1;
+}
+
+.linha3 .coluna {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.linha3 .coluna:not(:last-child) {
+    display: block;
+}
+
+.linha3 .coluna .subcoluna {
+    flex: 1;
+    width: 100%;
+}
+
+/* Cores para visualização */
+.linha1 .coluna:nth-child(1) {
+    background: crimson;
+}
+
+.linha1 .coluna:nth-child(2) {
+    background: darkorange;
+}
+
+.linha1 .coluna:nth-child(3) {
+    background: gold;
+}
+
+.linha1 .coluna:nth-child(4) {
+    background: limegreen;
+}
+
+.linha1 .coluna:nth-child(5) {
+    background: turquoise;
+}
+
+.linha2 .coluna:nth-child(1) {
+    background: navy;
+}
+
+.linha2 .coluna:nth-child(2) {
+    background: mediumslateblue;
+}
+
+.linha3 .coluna:nth-child(1) {
+    background: palevioletred;
+}
+
+.linha3 .coluna:nth-child(2) {
+    background: darkseagreen;
+}
+
+.linha3 .coluna:nth-child(3) {
+    background: chocolate;
+}
+
+.linha3 .coluna:nth-child(4) {
+    background: lightsalmon;
+}
+
+.linha3 .coluna:nth-child(5) .subcoluna:nth-child(1) {
+    background: #444;
+}
+
+.linha3 .coluna:nth-child(5) .subcoluna:nth-child(2) {
+    background: #666;
+}
+
+.linha3 .coluna:nth-child(5) .subcoluna:nth-child(3) {
+    background: #888;
+}
+
+.linha3 .coluna:nth-child(5) .subcoluna:nth-child(4) {
+    background: #aaa;
+}
+
+/* Para mostrar o nome das divisões */
+.coluna,
+.subcoluna {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border: 1px solid white;
+}

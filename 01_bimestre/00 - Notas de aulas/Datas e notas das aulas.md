@@ -90,10 +90,11 @@ Múltiplas páginas
 ... longa conversa sobre avaliação
 
 ## [17/04/2025 - qui]()
-Seletores CSS
+Layout Flex (CSS)
 
-[## 22/04/2025 - ter]()
+## [22/04/2025 - ter]()
 Exercícios com seletores css
+
 ## 📺 [Front-end, back-end e full-stack](https://www.youtube.com/watch?v=bnoXykE_ng0)
 
 ## 24/04/2025 - qui
