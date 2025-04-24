@@ -98,7 +98,14 @@ Exercícios com seletores css
 ## 📺 [Front-end, back-end e full-stack](https://www.youtube.com/watch?v=bnoXykE_ng0)
 
 ## 24/04/2025 - qui
-Seletor de elementos
+Fonts
+https://fonts.google.com/
+
+Download
+
+Import
+
+[Exemplos](https://github.com/rjhalmeman/dw1/tree/main/01_bimestre/2025-04-24%20-%20google%20fonts)
 
 ## 29/04/2025 - ter
 Exercícios com seletores de elementos.
