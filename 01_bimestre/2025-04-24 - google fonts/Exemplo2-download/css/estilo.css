@@ -1,0 +1,20 @@
+@font-face {
+  font-family: 'Imperial Script';
+  src: url('../fonts/ImperialScript-Regular.ttf') format('truetype');
+}
+
+/* Fonte padrão para os h1 (sem import) */
+h1 {
+  font-family: Arial, sans-serif;
+  font-size: 48px;
+}
+
+/* Fonte importada apenas para os elementos com a classe .imperial */
+h1.imperial{
+  font-family: 'Imperial Script', cursive;
+}
+
+/* Fonte importada apenas para os elementos com a classe .imperial */
+h2.imperial{
+  font-family: 'Imperial Script', cursive;
+}

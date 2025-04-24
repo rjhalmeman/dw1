@@ -1,0 +1,20 @@
+@font-face {
+  font-family: 'MonsieurLaDoulaise-Regular';
+  src: url('../fonts/MonsieurLaDoulaise-Regular.ttf') format('truetype');
+}
+
+/* Fonte padrão para os h1 (sem import) */
+h1 {
+  font-family: Arial, sans-serif;
+  font-size: 48px;
+}
+
+/* Fonte importada apenas para os elementos com a classe .imperial */
+h1.art{
+  font-family: 'MonsieurLaDoulaise-Regular', cursive;
+}
+
+/* Fonte importada apenas para os elementos com a classe .imperial */
+h2.art{
+  font-family: 'MonsieurLaDoulaise-Regular', cursive;
+}
