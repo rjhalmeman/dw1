@@ -21,6 +21,7 @@ esclarecimento de dúvidas sobre avaliação do segundo bimestre
 ## 03/06/2025 - ter	---
 
 ## 05/06/2025 - qui	---
+- entrega/apresentação dos wireframes
 
 ## 10/06/2025 - ter	---
 
@@ -35,6 +36,7 @@ esclarecimento de dúvidas sobre avaliação do segundo bimestre
 ## 01/07/2025 - ter	---
 
 ## 03/07/2025 - qui	---
+Avaliação do 2º bimestre
 
 ## 08/07/2025 - ter	---
 
