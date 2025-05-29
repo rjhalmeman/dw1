@@ -18,7 +18,6 @@
         async function enviarPalavra() {
             debugger
             const palavra = document.getElementById('palavraInput').value;
-
             try {
                 const response = await fetch('http://localhost:3000/enviar-palavra', {
                     method: 'POST',
