@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Enviar Palavra</title>
+</head>
+
+<body>
+    <h1>Envie uma palavra para o servidor</h1>
+    <input type="text" id="palavraInput" placeholder="Digite uma palavra">
+    <button onclick="enviarPalavra()">Enviar</button>
+    <br>
+    <br>
+    <h3> Resposta do servidor</h3>
+    <span id="respostaDoServidor">.....</span>    
+
+    <script>
+        async function enviarPalavra() {
+            debugger
+            const palavra = document.getElementById('palavraInput').value;
+
+            try {
+                const response = await fetch('http://localhost:3000/enviar-palavra', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ palavra })
+                });
+
+                const data = await response.text();
+                debugger
+                document.getElementById("respostaDoServidor").innerHTML = data;
+            } catch (error) {
+                console.error('Erro:', error);
+                alert('Erro na comunicação com o servidor');
+            }
+        }
+    </script>
+</body>
+
+</html>
