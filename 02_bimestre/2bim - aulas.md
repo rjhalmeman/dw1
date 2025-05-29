@@ -21,7 +21,7 @@ esclarecimento de dúvidas sobre avaliação do segundo bimestre
 
 Cliente/servidor
 
-[Vídeo explicando(https://www.youtube.com/watch?v=YIHbLopthgg)]
+[Vídeo explicando](https://www.youtube.com/watch?v=YIHbLopthgg)
 
 
 ## 03/06/2025 - ter	---
