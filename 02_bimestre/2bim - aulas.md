@@ -23,6 +23,8 @@ Cliente/servidor
 
 [Vídeo explicando](https://www.youtube.com/watch?v=YIHbLopthgg)
 
+[Código fonte](https://github.com/rjhalmeman/dw1/tree/main/02_bimestre/2025-05-29%20-%20clienteServerSimples)
+
 
 ## 03/06/2025 - ter	---
 
