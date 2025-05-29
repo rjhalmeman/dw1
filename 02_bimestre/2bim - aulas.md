@@ -12,6 +12,15 @@ Tela de login
 ## 22/05/2025 - qui	---
 git hub - fork, contribute, pull request
 
+https://github.com/rjhalmeman/crud-produto-server
+Este repositório foi usado para os exercícios. No repositório tem um arquivo chamado perguntas.md. Os alunos deveria fazer o fork, 
+responder uma das perguntas, fazer o git add, git commit e git push (subir o código para o github) e fazer um pull request (solicitando a incorporação da resposta da pergunta no 
+repositório original)
+
+
+
+
+
 ## 27/05/2025 - ter	---
 esclarecimento de dúvidas sobre avaliação do segundo bimestre
 
