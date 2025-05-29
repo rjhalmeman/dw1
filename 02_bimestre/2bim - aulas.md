@@ -13,10 +13,16 @@ Tela de login
 git hub - fork, contribute, pull request
 
 ## 27/05/2025 - ter	---
-hugh her
 esclarecimento de dúvidas sobre avaliação do segundo bimestre
 
 ## 29/05/2025 - qui	---
+
+[Hugh Herr](https://www.youtube.com/watch?v=CDsNZJTWw0w&t=485s)
+
+Cliente/servidor
+
+[Vídeo explicando(https://www.youtube.com/watch?v=YIHbLopthgg)]
+
 
 ## 03/06/2025 - ter	---
 
