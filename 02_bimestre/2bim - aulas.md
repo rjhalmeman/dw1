@@ -7,13 +7,18 @@
 Tela de login
  - análise de complexidade
 
+Explanação sobre a complexidade no desenvolvimento de uma tela de login quando consideramos os desdobramentos como: cadastro de novo usuário, recursos para recuperação de telas.
+
 ## 20/05/2025 - ter	---
 
+Explanação sobre diferentes papeis de usuários do sistema. Considerando o cliente (só compra, mas não muda dados) e o administrador que é capaz de modificar os dados dos produtos.
 
 ## 22/05/2025 - qui	---
+
 git hub - fork, contribute, pull request
 
 https://github.com/rjhalmeman/crud-produto-server
+
 Este repositório foi usado para os exercícios. No repositório tem um arquivo chamado perguntas.md. Os alunos deveria fazer o fork, 
 responder uma das perguntas, fazer o git add, git commit e git push (subir o código para o github) e fazer um pull request (solicitando a incorporação da resposta da pergunta no 
 repositório original)
