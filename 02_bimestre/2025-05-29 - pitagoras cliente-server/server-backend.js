@@ -24,7 +24,7 @@ app.post('/calcular-hipotenusa', (req, res) => {
     const a = Math.sqrt(b * b + c * c);
     console.log(`Recebido B=${b}, C=${c}, Hipotenusa calculada: A=${a}`);
 
-    res.send(`A hipotenusa é ${a.toFixed(2)}`);
+    res.send(`A hipotenusa é: ${a.toFixed(2)}`);
 });
 
 app.listen(port, () => {
