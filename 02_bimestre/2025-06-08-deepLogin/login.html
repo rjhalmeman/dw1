@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="menu">
+        <a href="index.html">Home</a>
+        <a href="pagina1.html">Página 1</a>
+        <a href="pagina2.html">Página 2</a>
+        <a href="login.html" id="login-link">Login</a>
+        <a href="#" id="logout-link" style="display: none;" onclick="logout()">Logout</a>
+    </div>
+
+    <div class="content">
+        <div class="login-form">
+            <h1>Login</h1>
+            <input id="email" type="email" placeholder="Email" value="joao@email.com">
+            <input id="senha" type="password" placeholder="Senha" value="abc123">
+            <button onclick="login()">Entrar</button>
+            <p id="login-error" class="error"></p>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
