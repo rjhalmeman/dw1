@@ -1,3 +1,4 @@
+
 // Verifica autenticação e redireciona se necessário
 async function checkAuth() {
     try {
@@ -7,6 +8,8 @@ async function checkAuth() {
         });
 
         //console.log("esta na funcao checkAuth "+response)
+
+
 
         if (!response.ok) throw new Error('Não autorizado');
         return await response.json();
@@ -26,7 +29,7 @@ async function protectPage() {
 
 function isProtectedPage() {
     return window.location.pathname.includes('pagina1.html') ||
-           window.location.pathname.includes('pagina2.html');
+        window.location.pathname.includes('pagina2.html');
 }
 
 function updateAuthUI(isAuthenticated) {
@@ -53,7 +56,7 @@ async function login() {
         });
         const data = await response.json();
         if (data.success) {
-            alert(`Bem-vindo, ${data.nome}!`);
+            // alert(`Bem-vindo, ${data.nome}!`);
             setTimeout(() => {
                 const redirect = new URLSearchParams(window.location.search).get('redirect') || 'index.html';
                 window.location.href = redirect;
@@ -73,6 +76,7 @@ async function logout() {
             credentials: 'include'
         });
         updateAuthUI(false);
+        pessoaLogada = "";
         window.location.href = 'index.html';
     } catch (error) {
         console.error('Erro ao fazer logout:', error);
@@ -81,12 +85,13 @@ async function logout() {
 
 //chamado uma vez, ao iniciar cada página html
 document.addEventListener('DOMContentLoaded', async () => {
+
     if (isProtectedPage()) {
         //alert("pagina protegida ")
         await protectPage();
     } else {
         const isAuthenticated = await checkAuth();
-        console.log("está autenticado? "+ isAuthenticated)
+        console.log("está autenticado? " + isAuthenticated)
         updateAuthUI(isAuthenticated.authenticated);
     }
 });
