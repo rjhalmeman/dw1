@@ -80,6 +80,7 @@ async function fazerLogin(event) {
 
 // Fazer logout
 async function fazerLogout() {
+    debugger
     try {
         const response = await fetch(`${API_URL}/api/logout`, {
             method: 'POST',
@@ -91,8 +92,8 @@ async function fazerLogout() {
             mostrarFormLogin();
             
             // Se estiver em página protegida, redirecionar para home
-            if (window.location.pathname !== 'http://127.0.0.1:3001/frontend' && window.location.pathname !== 'http://127.0.0.1:3001/frontend/index.html') {
-                window.location.href = 'http://127.0.0.1:3001/frontend';
+            if (window.location.pathname !== 'http://127.0.0.1:5500/frontend' && window.location.pathname !== 'http://127.0.0.1:5500/frontend/index.html') {
+                window.location.href = 'http://127.0.0.1:5500/frontend';
             }
         }
     } catch (error) {
