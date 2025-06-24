@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Autenticação</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Sistema de Autenticação</h1>
+            <div id="user-info" class="user-info" style="display: none;">
+                <span id="user-name"></span>
+                <button id="logout-btn" class="btn btn-secondary">Logout</button>
+            </div>
+        </header>
+
+        <main>
+            <div id="login-form" class="card">
+                <h2>Login</h2>
+                <form id="form-login">
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required value="joao@admin.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="senha">Senha:</label>
+                        <input type="password" id="senha" name="senha" required value="123456">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Entrar</button>
+                </form>
+                <div id="error-message" class="error-message"></div>
+                
+                <div class="demo-users">
+                    <h3>Usuários de demonstração:</h3>
+                    <p><strong>Admin:</strong> joao@admin.com / 123456</p>
+                    <p><strong>Admin:</strong> pedro@admin.com / admin123</p>
+                    <p><strong>Cliente:</strong> maria@client.com / 654321</p>
+                    <p><strong>Cliente:</strong> ana@client.com / client123</p>
+                </div>
+            </div>
+
+            <div id="public-content" class="card">
+                <h2>Página Pública</h2>
+                <p>Esta é uma página pública que todos podem acessar sem fazer login.</p>
+                <p>Faça login para acessar as áreas protegidas do sistema.</p>
+            </div>
+
+            <div id="protected-content" class="card" style="display: none;">
+                <h2>Área Protegida</h2>
+                <p>Você está logado! Escolha uma das opções abaixo:</p>
+                <div class="buttons">
+                    <a href="./admin.html" class="btn btn-primary" id="admin-link" style="display: none;">
+                        Área Administrativa
+                    </a>
+                    <a href="./client.html" class="btn btn-primary">
+                        Área do Cliente
+                    </a>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Teste de Login</title>
+</head>
+<body>
+  <h1>Teste de Login com Sessão</h1>
+
+  <div>
+    <h2>Login</h2>
+    <input type="email" id="email" placeholder="Email" value="joao@admin.com"><br>
+    <input type="password" id="senha" placeholder="Senha" value="123456"><br>
+    <button onclick="login()">Entrar</button>
+  </div>
+
+  <div>
+    <h2>Status</h2>
+    <button onclick="verificarAuth()">Verificar se está logado</button>
+    <p id="status"></p>
+  </div>
+
+  <div>
+    <h2>Logout</h2>
+    <button onclick="logout()">Sair</button>
+  </div>
+
+  <script>
+    async function login() {
+      const email = document.getElementById('email').value;
+      const senha = document.getElementById('senha').value;
+
+      const response = await fetch('http://127.0.0.1:3001/api/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        credentials: 'include',
+        body: JSON.stringify({ email, senha })
+      });
+
+      const data = await response.json();
+      document.getElementById('status').innerText = JSON.stringify(data, null, 2);
+    }
+
+    async function verificarAuth() {
+      const response = await fetch('http://127.0.0.1:3001/api/verificar-auth', {
+        method: 'GET',
+        credentials: 'include'
+      });
+
+      const data = await response.json();
+      document.getElementById('status').innerText = JSON.stringify(data, null, 2);
+    }
+
+    async function logout() {
+      const response = await fetch('http://127.0.0.1:3001/api/logout', {
+        method: 'POST',
+        credentials: 'include'
+      });
+
+      const data = await response.json();
+      document.getElementById('status').innerText = JSON.stringify(data, null, 2);
+    }
+  </script>
+</body>
+</html>

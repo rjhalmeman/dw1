@@ -1,4 +1,4 @@
-projeto didático com login e autenticação
+projeto didático com login e autenticação usando cliente/servidor
 
 usuários para testes
 
