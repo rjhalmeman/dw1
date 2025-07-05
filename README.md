@@ -1,15 +1,8 @@
-Como transformar uma pasta em branch
-no terminal (prompt)
- - git checkout -b nomeDaBranch
- - git filter-branch --subdirectory-filter "nomeDaPastaNoGitHub" -- --all
- - git push origin nomeDaBranch
- - 
+projeto didático com login e autenticação usando cliente/servidor
 
+usuários para testes
 
+  { email: 'joao@email.com', senha: 'abc123', nome: 'João' },
+  { email: 'maria@email.com', senha: 'abcd', nome: 'Maria' }
 
-
-Como clonar uma branch específica
-git clone --branch nomeDaBranch --single-branch https://github.com/usuario/repositorioQueContemABranch
-
-exemplo
-git clone --branch clienteServerSimples --single-branch https://github.com/rjhalmeman/dw1
+  
