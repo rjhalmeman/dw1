@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área do Cliente</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Área do Cliente</h1>
+            <div id="user-info" class="user-info">
+                <span id="user-name"></span>
+                <button id="logout-btn" class="btn btn-secondary">Logout</button>
+            </div>
+        </header>
+
+        <nav>
+            <a href="index.html" class="btn btn-secondary">Voltar ao Início</a>
+            <a href="admin.html" class="btn btn-secondary" id="admin-link" style="display: none;">
+                Área Administrativa
+            </a>
+        </nav>
+
+        <main>
+            <div class="card">
+                <h2>Painel do Cliente</h2>
+                <p>Bem-vindo à área do cliente! Esta página é acessível para usuários logados.</p>
+                
+                <div id="client-content">
+                    <div class="loading">Carregando dados do cliente...</div>
+                </div>
+
+                <div class="client-section">
+                    <h3>Suas Informações</h3>
+                    <div id="user-details">
+                        <div class="loading">Carregando informações...</div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Código específico da página client
+        document.addEventListener('DOMContentLoaded', function() {
+            carregarDadosCliente();
+        });
+
+        async function carregarDadosCliente() {
+            try {
+                const response = await fetch('http://127.0.0.1:3001/api/client', {
+                    credentials: 'include'
+                });
+                
+                if (response.ok) {
+                    const data = await response.json();
+                    document.getElementById('client-content').innerHTML = `
+                        <div class="client-data">
+                            <h4>Dados do Cliente</h4>
+                            <p><strong>Mensagem:</strong> ${data.mensagem}</p>
+                            <p><strong>Dados:</strong> ${data.dados}</p>
+                        </div>
+                    `;
+                    
+                    document.getElementById('user-details').innerHTML = `
+                        <div class="user-profile">
+                            <p><strong>Nome:</strong> ${data.usuario.nome}</p>
+                            <p><strong>Email:</strong> ${data.usuario.email}</p>
+                            <p><strong>Cargo:</strong> <span class="badge ${data.usuario.cargo}">${data.usuario.cargo}</span></p>
+                        </div>
+                    `;
+                } else {
+                    window.location.href = 'http://127.0.0.1:3001/';
+                }
+            } catch (error) {
+                console.error('Erro ao carregar dados do cliente:', error);
+                window.location.href = 'http://127.0.0.1:3001/';
+            }
+        }
+    </script>
+</body>
+</html>
