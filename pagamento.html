@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <!-- Metadados básicos do documento -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pagamento</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Cabeçalho simplificado -->
+  <header>
+    <a href="index.html" class="logo">
+      <img src="imagens/logo.png" alt="Logo Hamburgueria">
+      <span>Hamburgueria do Sabor</span>
+    </a>
+  </header>
+
+  <!-- Título da página -->
+  <h1>Pagamento</h1>
+  <!-- Formulário de pagamento -->
+  <form id="form-pagamento" onsubmit="return validarPagamento()">
+    <!-- Campos do cartão de crédito -->
+    <label>Número do Cartão:</label>
+    <input type="text" id="numero" maxlength="16" required placeholder="Digite 16 números"><br>
+
+    <label>Validade (MM/AA):</label>
+    <input type="text" id="validade" placeholder="MM/AA" required><br>
+
+    <label>CVV:</label>
+    <input type="text" id="cvv" maxlength="3" required><br>
+
+    <!-- Botão de submissão -->
+    <button type="submit">Finalizar Pagamento</button>
+  </form>
+
+  <!-- Script de validação embutido na página -->
+  <script>
+    function validarPagamento() {
+      // Obtém os valores dos campos
+      const numero = document.getElementById("numero").value;
+      const validade = document.getElementById("validade").value;
+      const cvv = document.getElementById("cvv").value;
+
+      // Validação do número do cartão (16 dígitos numéricos)
+      if (numero.length !== 16 || isNaN(numero)) {
+        alert("Número do cartão inválido.");
+        return false;
+      }
+
+      // Validação da data (formato MM/AA)
+      const regexValidade = /^(0[1-9]|1[0-2])\/\d{2}$/;
+      if (!regexValidade.test(validade)) {
+        alert("Validade inválida.");
+        return false;
+      }
+
+      // Validação do CVV (3 dígitos numéricos)
+      if (cvv.length !== 3 || isNaN(cvv)) {
+        alert("CVV inválido.");
+        return false;
+      }
+
+      // Mensagem de sucesso
+      alert("Pagamento aprovado! Obrigado pela compra 😄");
+      return true;
+    }
+  </script>
+</body>
+</html>

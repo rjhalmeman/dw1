@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout - Hamburgueria do Sabor</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="checkout.css">
+  <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.3/build/qrcode.min.js"></script>
+</head>
+<body>
+  <header>
+    <a href="index.html" class="logo">
+      <img src="imagens/logo.png" alt="Logo Hamburgueria">
+      <span>Hamburgueria do Sabor</span>
+    </a>
+  </header>
+
+  <div class="checkout-container">
+    <h1>Finalizar Pedido</h1>
+    
+    <div class="order-summary">
+      <h2>Resumo do Pedido</h2>
+      <div class="total-amount">
+        <strong>Total: R$ <span id="checkoutTotal">0.00</span></strong>
+      </div>
+    </div>
+
+    <form id="checkoutForm" class="payment-form">
+      <h2>Forma de Pagamento</h2>
+      
+      <div class="payment-methods">
+        <label class="payment-option">
+          <input type="radio" name="paymentMethod" value="pix" checked>
+          <span>PIX</span>
+        </label>
+        
+        <label class="payment-option">
+          <input type="radio" name="paymentMethod" value="card">
+          <span>Cartão de Crédito/Débito</span>
+        </label>
+      </div>
+
+      <!-- PIX Payment Section -->
+      <div id="pixPaymentSection" class="payment-section">
+        <h3>Pagamento via PIX</h3>
+        <div id="pixQrCodeContainer" style="text-align: center; margin: 20px 0;">
+          <canvas id="qrcode"></canvas>
+        </div>
+      </div>
+
+      <!-- Card Payment Section -->
+      <div id="cardPaymentSection" class="payment-section" style="display: none;">
+        <h3>Dados do Cartão</h3>
+        
+        <div class="card-type-selection">
+          <label>
+            <input type="radio" name="cardType" value="credit" checked>
+            Crédito
+          </label>
+          <label>
+            <input type="radio" name="cardType" value="debit">
+            Débito
+          </label>
+        </div>
+
+        <div class="form-group">
+          <label for="cardNumber">Número do Cartão:</label>
+          <input type="text" id="cardNumber" placeholder="0000 0000 0000 0000" maxlength="19">
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="cardExpiry">Validade:</label>
+            <input type="text" id="cardExpiry" placeholder="MM/AA" maxlength="5">
+          </div>
+          <div class="form-group">
+            <label for="cardCvv">CVV:</label>
+            <input type="text" id="cardCvv" placeholder="000" maxlength="3">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="cardName">Nome no Cartão:</label>
+          <input type="text" id="cardName" placeholder="Nome como está no cartão">
+        </div>
+
+        <div class="form-group" id="installmentsGroup">
+          <label for="installments">Parcelas:</label>
+          <select id="installments">
+            <option value="1">1x sem juros</option>
+            <option value="2">2x sem juros</option>
+            <option value="3">3x sem juros</option>
+            <option value="4">4x sem juros</option>
+            <option value="5">5x sem juros</option>
+            <option value="6">6x sem juros</option>
+          </select>
+        </div>
+      </div>
+
+      <button type="submit" class="checkout-btn">Finalizar Pagamento</button>
+    </form>
+
+    <!-- Payment Result -->
+    <div id="cardPaymentResult" style="display: none;">
+      <div id="paymentStatus"></div>
+    </div>
+  </div>
+
+  <script src="checkout.js"></script>
+  <script>
+    // Toggle payment sections
+    document.querySelectorAll('input[name="paymentMethod"]').forEach(radio => {
+      radio.addEventListener('change', function() {
+        const pixSection = document.getElementById('pixPaymentSection');
+        const cardSection = document.getElementById('cardPaymentSection');
+        
+        if (this.value === 'pix') {
+          pixSection.style.display = 'block';
+          cardSection.style.display = 'none';
+        } else {
+          pixSection.style.display = 'none';
+          cardSection.style.display = 'block';
+        }
+      });
+    });
+
+    // Toggle installments based on card type
+    document.querySelectorAll('input[name="cardType"]').forEach(radio => {
+      radio.addEventListener('change', function() {
+        const installmentsGroup = document.getElementById('installmentsGroup');
+        if (this.value === 'debit') {
+          installmentsGroup.style.display = 'none';
+        } else {
+          installmentsGroup.style.display = 'block';
+        }
+      });
+    });
+
+    // Format card number input
+    document.getElementById('cardNumber').addEventListener('input', function(e) {
+      let value = e.target.value.replace(/\s/g, '').replace(/[^0-9]/gi, '');
+      let formattedValue = value.match(/.{1,4}/g)?.join(' ') || value;
+      if (formattedValue.length > 19) formattedValue = formattedValue.substr(0, 19);
+      this.value = formattedValue;
+    });
+
+    // Format expiry date input
+    document.getElementById('cardExpiry').addEventListener('input', function(e) {
+      let value = e.target.value.replace(/\D/g, '');
+      if (value.length >= 2) {
+        value = value.substring(0, 2) + '/' + value.substring(2, 4);
+      }
+      this.value = value;
+    });
+
+    // Only allow numbers in CVV
+    document.getElementById('cardCvv').addEventListener('input', function(e) {
+      this.value = this.value.replace(/[^0-9]/g, '');
+    });
+  </script>
+</body>
+</html>
+

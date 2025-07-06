@@ -1,11 +1,128 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agora vai</title>
+  <!-- Metadados básicos do documento -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hamburgueria do Sabor</title>
+  <!-- Link para o arquivo CSS -->
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
+  <!-- Cabeçalho da página -->
+  <header>
+    <!-- Logo e nome da hamburgueria -->
+    <a href="index.html" class="logo">
+      <img src="imagens/logo.png" alt="Logo Hamburgueria">
+      <span>Hamburgueria do Sabor</span>
+    </a>
+    <!-- Barra de pesquisa -->
+    <div class="barra-pesquisa">
+      <input type="text" id="input-pesquisa" placeholder="Pesquisar...">
+      <button onclick="filtrarPorPesquisa()">Buscar</button>
+    </div>
+    <!-- Área de login/usuário -->
+    <div class="user-area">
+      <div id="user-info" style="display: none;">
+        <span id="user-name"></span>
+        <button onclick="logout()" class="logout-btn">Sair</button>
+      </div>
+      <div id="login-buttons">
+        <button onclick="window.location.href='login.html'" class="login-btn">Entrar</button>
+        <button onclick="window.location.href='register.html'" class="register-btn">Cadastrar</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Botões de categorias -->
+  <div class="categorias">
+    <button class="categoria-btn active" onclick="filtrarProdutos('hamburgueres')">Hambúrgueres</button>
+    <button class="categoria-btn" onclick="filtrarProdutos('bebidas')">Bebidas</button>
+    <button class="categoria-btn" onclick="filtrarProdutos('sobremesas')">Sobremesas</button>
+  </div>
+
+  <!-- Área onde os produtos serão exibidos -->
+  <div id="produtos" class="grade"></div>
+
+  <!-- Caixa fixa com subtotal e botão para o carrinho -->
+  <div id="caixa-fixa">
+    <p id="subtotal-fixo">Subtotal: R$ 0,00</p>
+    <button onclick="irParaCarrinho()">Ir para o Carrinho</button>
+  </div>
+
+  <!-- Script JavaScript principal -->
+  <script src="script.js"></script>
+  <script>
+    // Verificar se o usuário está logado
+    document.addEventListener('DOMContentLoaded', function() {
+      const currentUser = JSON.parse(localStorage.getItem('currentUser') || '{}');
+      const isLoggedIn = localStorage.getItem('loggedIn') === 'true';
+      
+      if (isLoggedIn && currentUser.name) {
+        document.getElementById('user-info').style.display = 'block';
+        document.getElementById('login-buttons').style.display = 'none';
+        document.getElementById('user-name').textContent = `Olá, ${currentUser.name}`;
+        
+        // Adicionar botão de admin se for gerente
+        if (currentUser.role === 'gerente') {
+          const adminBtn = document.createElement('button');
+          adminBtn.textContent = 'Painel Admin';
+          adminBtn.className = 'admin-btn';
+          adminBtn.onclick = () => window.location.href = 'crud.html';
+          document.getElementById('user-info').insertBefore(adminBtn, document.querySelector('.logout-btn'));
+        }
+      }
+    });
+
+    function logout() {
+      localStorage.removeItem('currentUser');
+      localStorage.removeItem('loggedIn');
+      window.location.reload();
+    }
+  </script>
+  
+  <style>
+    .user-area {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
     
+    .login-btn, .register-btn, .logout-btn, .admin-btn {
+      padding: 8px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    
+    .login-btn {
+      background: white;
+      color: #e74c3c;
+    }
+    
+    .register-btn {
+      background: #333;
+      color: white;
+    }
+    
+    .logout-btn {
+      background: #dc3545;
+      color: white;
+    }
+    
+    .admin-btn {
+      background: #28a745;
+      color: white;
+      margin-right: 10px;
+    }
+    
+    #user-name {
+      color: white;
+      font-weight: bold;
+      margin-right: 10px;
+    }
+  </style>
 </body>
 </html>
+

@@ -1,0 +1,213 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #fca9d7, #fad0c4, #fbc2eb);
+  margin: 0;
+  padding: 20px;
+}
+
+.painel {
+  background: #fff;
+  padding: 30px;
+  border-radius: 20px;
+  max-width: 1000px;
+  margin: auto;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+  text-align: center;
+  color: #a18cd1;
+}
+
+.resumo {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30px;
+  font-weight: bold;
+  font-size: 1.1em;
+  color: #7d4c92;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+  justify-content: space-between;
+}
+
+form input, form select {
+  flex: 1 1 48%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+form label {
+  width: 100%;
+  margin-top: 10px;
+  color: #7d4c92;
+}
+
+form button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(to right, #a18cd1, #fbc2eb);
+  border: none;
+  border-radius: 20px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+form button:hover {
+  transform: scale(1.05);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 40px;
+}
+
+table th, table td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #eee;
+}
+
+table th {
+  background-color: #fbc2eb;
+  color: #5d3a7c;
+}
+
+table td button {
+  margin: 0 0px;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-editar {
+  background-color: #a18cd1;
+}
+
+.btn-excluir {
+  background-color: #f79bdd;
+}
+
+.btn-trocar {
+  background-color: #b19cd9;
+}
+.btn-padrao {
+  padding: 12px 24px;
+  background: linear-gradient(to right, #a18cd1, #fbc2eb);
+  border: none;
+  border-radius: 20px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1em;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-padrao:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(161, 140, 209, 0.4);
+}
+/* Estilo para tabela de usuários */
+#tabelaUsuarios input {
+  width: 100%;
+  padding: 6px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  font-size: 0.9em;
+}
+
+#tabelaUsuarios td, #tabelaUsuarios th {
+  min-width: 120px;
+  vertical-align: middle;
+  background-color: #ffe3f3;
+}
+
+#tabelaUsuarios th {
+  background-color: #fbc2eb;
+  color: #5d3a7c;
+  font-weight: bold;
+}
+
+#tabelaUsuarios td {
+  background-color: #fff0f7;
+}
+
+/* Torna a tabela rolável horizontalmente se necessário */
+table {
+  overflow-x: auto;
+  display: block;
+}
+
+/* Espaçamento geral nos botões da tabela */
+table td button {
+  margin-top: 5px;
+}
+
+/* Deixa a tabela mais compacta e elegante */
+table input {
+  font-family: inherit;
+  font-size: 0.9em;
+}
+/* Ajustes para a tabela de produtos */
+#tabelaProdutos td, #tabelaProdutos th {
+  padding: 25px;
+  text-align: center;
+  vertical-align: middle;
+  min-width: 100px;
+  background-color: #fff0f9;
+}
+
+#tabelaProdutos th {
+  background-color: #fbc2eb;
+  color: #5d3a7c;
+  font-weight: bold;
+}
+
+#tabelaProdutos img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Linha de categoria como título */
+#tabelaProdutos tr td[colspan="6"] {
+  background-color: #f5d0ff;
+  font-weight: bold;
+  color: #5c2c91;
+  font-size: 1.1em;
+  text-align: center;
+}
+
+/* Botões de ação */
+#tabelaProdutos button {
+  margin: 2px;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-editar {
+  background-color: #a18cd1;
+  color: white;
+}
+
+.btn-excluir {
+  background-color: #f79bdd;
+  color: white;
+}

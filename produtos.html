@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <!-- Metadados básicos do documento -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cardápio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Cabeçalho idêntico ao index.html -->
+  <header>
+    <a href="index.html" class="logo">
+      <img src="imagens/logo.png" alt="Logo Hamburgueria">
+      <span>Hamburgueria do Sabor</span>
+    </a>
+    <div class="barra-pesquisa">
+      <input type="text" id="input-pesquisa" placeholder="Pesquisar...">
+      <button onclick="filtrarPorPesquisa()">Buscar</button>
+    </div>
+  </header>
+
+  <!-- Caixa fixa com subtotal e botão para o carrinho -->
+  <div id="caixa-fixa">
+    <p id="subtotal-fixo">Subtotal: R$ 0,00</p>
+    <button onclick="irParaCarrinho()">Ir para o Carrinho</button>
+  </div>
+  
+  <!-- Título da página -->
+  <h1>Cardápio</h1>
+  
+  <!-- Botões de categorias -->
+  <div class="categorias">
+    <button class="categoria-btn active" onclick="filtrarProdutos('hamburgueres')">Hambúrgueres</button>
+    <button class="categoria-btn" onclick="filtrarProdutos('bebidas')">Bebidas</button>
+    <button class="categoria-btn" onclick="filtrarProdutos('sobremesas')">Sobremesas</button>
+  </div>
+
+  <!-- Área onde os produtos serão exibidos -->
+  <div id="produtos" class="grade"></div>
+
+  <!-- Subtotal e botão para o carrinho (duplicado para melhor usabilidade) -->
+  <h2 id="subtotal">Subtotal: R$ 0,00</h2>
+  <button onclick="irParaCarrinho()">Prosseguir para o Carrinho</button>
+
+  <!-- Script JavaScript principal -->
+  <script src="script.js"></script>
+</body>
+</html>
