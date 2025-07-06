@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Calcular Hipotenusa</title>
+</head>
+
+<body>
+    <h1>Calcular Hipotenusa (Teorema de Pitágoras)</h1>
+    <input type="number" id="valorB" placeholder="Digite o valor de B">
+    <input type="number" id="valorC" placeholder="Digite o valor de C">
+    <button onclick="enviarValores()">Enviar</button>
+    <br><br>
+    <h3>Resultado:</h3>
+    <span id="respostaDoServidor">.....</span>
+
+    <script>
+        async function enviarValores() {
+            debugger;
+            const b = parseFloat(document.getElementById('valorB').value);
+            const c = parseFloat(document.getElementById('valorC').value);
+
+            try {
+                const response = await fetch('http://localhost:3000/calcular-hipotenusa', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ b, c })
+                });
+
+                const resultado = await response.text();
+                debugger;
+                document.getElementById("respostaDoServidor").innerHTML = resultado;
+            } catch (error) {
+                console.error('Erro:', error);
+                alert('Erro na comunicação com o servidor');
+            }
+        }
+    </script>
+</body>
+
+</html>
+
