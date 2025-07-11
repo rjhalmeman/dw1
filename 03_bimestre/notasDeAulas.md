@@ -12,7 +12,7 @@
     ## portas diferentes 3000 / 5500
     ## micro serviços
     ## session manager (cookies)
-## git client (para facilitar o uso do github)
+    ## git client (para facilitar o uso do github).
 
 ## uso de ALERT
 
