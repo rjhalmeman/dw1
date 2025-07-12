@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <!-- Metadados básicos do documento -->
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hamburgueria do Sabor</title>
   <!-- Link para o arquivo CSS -->
-  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
   <!-- Cabeçalho da página -->
   <header>
@@ -54,15 +56,15 @@
   <script src="script.js"></script>
   <script>
     // Verificar se o usuário está logado
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
       const currentUser = JSON.parse(localStorage.getItem('currentUser') || '{}');
       const isLoggedIn = localStorage.getItem('loggedIn') === 'true';
-      
+
       if (isLoggedIn && currentUser.name) {
         document.getElementById('user-info').style.display = 'block';
         document.getElementById('login-buttons').style.display = 'none';
         document.getElementById('user-name').textContent = `Olá, ${currentUser.name}`;
-        
+
         // Adicionar botão de admin se for gerente
         if (currentUser.role === 'gerente') {
           const adminBtn = document.createElement('button');
@@ -80,43 +82,46 @@
       window.location.reload();
     }
   </script>
-  
+
   <style>
     .user-area {
       display: flex;
       align-items: center;
       gap: 10px;
     }
-    
-    .login-btn, .register-btn, .logout-btn, .admin-btn {
+
+    .login-btn,
+    .register-btn,
+    .logout-btn,
+    .admin-btn {
       padding: 8px 15px;
       border: none;
       border-radius: 5px;
       cursor: pointer;
       font-size: 14px;
     }
-    
+
     .login-btn {
       background: white;
       color: #e74c3c;
     }
-    
+
     .register-btn {
       background: #333;
       color: white;
     }
-    
+
     .logout-btn {
       background: #dc3545;
       color: white;
     }
-    
+
     .admin-btn {
       background: #28a745;
       color: white;
       margin-right: 10px;
     }
-    
+
     #user-name {
       color: white;
       font-weight: bold;
@@ -124,5 +129,5 @@
     }
   </style>
 </body>
-</html>
 
+</html>
