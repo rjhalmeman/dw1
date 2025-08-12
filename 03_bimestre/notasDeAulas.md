@@ -1,4 +1,4 @@
-# Uso de IA (discussão)
+
 
 
 12/08/2025		2	ter - modulo/usuário credenciais
@@ -6,12 +6,12 @@
 19/08/2025		2	ter - Gincana
 21/08/2025		2	qui - Gincana ??
 26/08/2025		2	ter - Enunciado da avaliação
-28/08/2025		2	qui
-02/09/2025		2	ter
-04/09/2025		2	qui
-09/09/2025		2	ter
-11/09/2025		2	qui
-16/09/2025		2	ter
+28/08/2025		2	qui - desenvolvimento de projetos
+02/09/2025		2	ter - desenvolvimento de projetos
+04/09/2025		2	qui - desenvolvimento de projetos
+09/09/2025		2	ter - desenvolvimento de projetos
+11/09/2025		2	qui - desenvolvimento de projetos
+16/09/2025		2	ter - desenvolvimento de projetos
 18/09/2025		2	qui - Apresentação de projeto (sorteio)
 23/09/2025		2	ter - Apresentação de projeto
 25/09/2025		2	qui - Apresentação de projeto
@@ -28,8 +28,8 @@
  - Uso de alerts
 
 
-
-# quais foram as IA's mais usadas?
+# Uso de IA (discussão)
+### quais foram as IA's mais usadas?
 ## copilot
 ## manus
 ## chatgpt
