@@ -7,7 +7,7 @@ app.use(express.json());
 app.use(cookieParser());
 
 app.use((req, res, next) => {
-  const allowedOrigins = ['http://127.0.0.1:5500', 'http://localhost:3000'];
+  const allowedOrigins = ['http://127.0.0.1:5500','http://127.0.0.1:5501', 'http://localhost:3000'];
   const origin = req.headers.origin;
   if (allowedOrigins.includes(origin)) {
     res.header('Access-Control-Allow-Origin', origin);
@@ -48,9 +48,6 @@ app.post('/login', (req, res) => {
   }
 });
 
-app.get('/check-auth', checkAuth, (req, res) => {
-  res.send({ authenticated: true });
-});
 
 app.post('/logout', (req, res) => {
   //precisa ser igual ao cookie criado
@@ -62,6 +59,10 @@ app.post('/logout', (req, res) => {
   });
   console.log("Cookie 'logado' removido com sucesso");
   res.send({ success: true });
+});
+
+app.get('/check-auth', checkAuth, (req, res) => {
+  res.send({ authenticated: true });
 });
 
 app.listen(port, () => {

@@ -7,10 +7,7 @@ async function checkAuth() {
             credentials: 'include'
         });
 
-        //console.log("esta na funcao checkAuth "+response)
-
-
-
+       
         if (!response.ok) throw new Error('Não autorizado');
         return await response.json();
     } catch (error) {
