@@ -4,7 +4,7 @@
 12/08/2025		2	ter - modulo/usuário credenciais
 14/08/2025		2	qui - estrutura do projeto - server modularizado
 19/08/2025		2	ter - Gincana
-21/08/2025		2	qui - Gincana ??
+21/08/2025		2	qui - Gincana 
 26/08/2025		2	ter - Enunciado da avaliação
 28/08/2025		2	qui - desenvolvimento de projetos
 02/09/2025		2	ter - desenvolvimento de projetos
