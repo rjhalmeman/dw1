@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<html>
+
+<head>
+    <title>Projeto Exemplo - Rotas usando multiplos arquivos</title>
+</head>
+
+<body>
+    <p>Este projeto mostra como criar um server.js, que importa rotas (routers.js) que acionam controllers.js</p>
+    <h1>Página Inicial</h1>
+    <button onclick="window.location.href=api_base_url+'/pagina1' ">Acionar rota para Página 1</button>
+    <button onclick="window.location.href=api_base_url+'/pagina1/vermelha' ">Acionar rota para Página 1 -
+        vermelha</button>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <button onclick="window.location.href=api_base_url+'/pagina2' ">Acionar rota para Página 2</button>
+
+
+    <script>
+        const api_base_url = 'http://localhost:3000'; // url e porta onde está rodando o server.js      
+    </script>
+</body>
+
+</html>
