@@ -1,1 +1,1 @@
-// JS de frontend se necessário
+ const api_base_url = 'http://localhost:3000'; // url e porta onde está rodando o server.js 
