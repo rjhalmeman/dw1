@@ -1,3 +1,7 @@
+// /backend/controllers/pagina1Controller.js
+// router para Página 1 - quais são as rotas que serão implementadas
+
+
 const express = require('express');
 const router = express.Router();
 const controller = require('../controllers/pagina1Controller');

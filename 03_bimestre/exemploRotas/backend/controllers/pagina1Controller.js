@@ -1,4 +1,5 @@
-
+// backend/controllers/pagina1Controller.js
+// Controlador para Página 1 - implementação das rotas
 
 const path = require('path');
 
