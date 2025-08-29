@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Verificar status do cookie</title>
+    <style>
+        body {
+            font-family: system-ui, sans-serif;
+            max-width: 720px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        button {
+            padding: .6rem 1rem;
+            border: 0;
+            border-radius: .5rem;
+            cursor: pointer;
+            background: #0ea5e9;
+            color: white;
+            margin: 0.5rem;
+        }
+
+        button.save {
+            background: #16a34a;
+        }
+
+        button.delete {
+            background: #dc2626;
+        }
+
+        button:disabled {
+            background: #94a3b8;
+            cursor: not-allowed;
+        }
+
+        pre {
+            background: #0f172a;
+            color: #e2e8f0;
+            padding: 1rem;
+            border-radius: .5rem;
+            overflow: auto;
+        }
+
+        .ok {
+            color: #16a34a;
+            font-weight: 700;
+        }
+
+        .fail {
+            color: #dc2626;
+            font-weight: 700;
+        }
+
+        .loading {
+            color: #0ea5e9;
+            font-weight: 700;
+        }
+
+        .card {
+            background: #f8fafc;
+            padding: 1rem;
+            border-radius: .5rem;
+            margin-bottom: 1rem;
+        }
+
+        input {
+            display: block;
+            width: 100%;
+            padding: .5rem;
+            margin: .5rem 0;
+            border: 1px solid #cbd5e1;
+            border-radius: .25rem;
+            box-sizing: border-box;
+        }
+
+        .status {
+            background: #e0f2fe;
+            padding: 1rem;
+            border-radius: .5rem;
+            margin-bottom: 1rem;
+            border-left: 4px solid #0ea5e9;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Gerenciamento do cookie <code>usuarioLogado</code></h1>
+    <p>Este exemplo demonstra o funcionamento de cookies HTTP Only com um backend Node.js.</p>
+
+    <div class="status">
+        <strong>Status do Servidor:</strong> <span id="server-status">Verificando...</span>
+    </div>
+
+    <div class="card">
+        <h2>1. Criar cookie (login)</h2>
+        <div>
+            <input type="text" id="nome" placeholder="Nome" value="João Silva">
+            <input type="email" id="email" placeholder="Email" value="joao@exemplo.com">
+        </div>
+        <button id="save" class="save">Salvar Cookie (Login)</button>
+    </div>
+
+    <div class="card">
+        <h2>2. Verificar status</h2>
+        <button id="check">Verificar se usuário está logado</button>
+    </div>
+
+    <div class="card">
+        <h2>3. Remover cookie</h2>
+        <button id="delete" class="delete">Deletar Cookie (Logout)</button>
+    </div>
+
+    <h2>Resultado</h2>
+    <pre id="output">Clique em algum botão acima…</pre>
+
+    <script>
+        const outputEl = document.getElementById('output');
+        const serverStatusEl = document.getElementById('server-status');
+        const API_BASE = 'http://localhost:3001';
+
+        function updateOutput(message, type = 'normal') {
+            let className = '';
+            switch(type) {
+                case 'error':
+                    className = 'fail';
+                    break;
+                case 'success':
+                    className = 'ok';
+                    break;
+                case 'loading':
+                    className = 'loading';
+                    break;
+                default:
+                    className = '';
+            }
+            
+            outputEl.innerHTML = className 
+                ? `<span class="${className}">${message}</span>`
+                : message;
+        }
+
+        function setButtonsDisabled(disabled) {
+            document.getElementById('save').disabled = disabled;
+            document.getElementById('check').disabled = disabled;
+            document.getElementById('delete').disabled = disabled;
+        }
+
+        async function checkServerHealth() {
+            try {
+                const response = await fetch(`${API_BASE}/health`, {
+                    method: 'GET',
+                    credentials: 'include'
+                });
+                
+                if (response.ok) {
+                    serverStatusEl.innerHTML = '<span class="ok">✅ Online</span>';
+                    return true;
+                } else {
+                    throw new Error(`HTTP ${response.status}`);
+                }
+            } catch (error) {
+                serverStatusEl.innerHTML = '<span class="fail">❌ Offline</span>';
+                console.error('Erro ao verificar servidor:', error);
+                return false;
+            }
+        }
+
+        async function saveCookie() {
+            const nome = document.getElementById('nome').value.trim();
+            const email = document.getElementById('email').value.trim();
+
+            if (!nome || !email) {
+                updateOutput('❌ Por favor, preencha nome e email', 'error');
+                return;
+            }
+
+            setButtonsDisabled(true);
+            updateOutput('🔄 Criando cookie...', 'loading');
+
+            try {
+                const response = await fetch(`${API_BASE}/login`, {
+                    method: 'POST',
+                    credentials: 'include',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ nome, email })
+                });
+
+                const data = await response.json();
+
+                if (response.ok && data.status === 'ok') {
+                    updateOutput('✅ Cookie criado com sucesso!', 'success');
+                } else {
+                    updateOutput(`❌ Erro ao criar cookie: ${data.message || 'Erro desconhecido'}`, 'error');
+                }
+            } catch (error) {
+                console.error('Erro na requisição:', error);
+                updateOutput(`❌ Erro de conexão: ${error.message}`, 'error');
+            } finally {
+                setButtonsDisabled(false);
+            }
+        }
+
+        async function checkLogin() {
+            setButtonsDisabled(true);
+            updateOutput('🔍 Verificando…', 'loading');
+
+            try {
+                const response = await fetch(`${API_BASE}/verificaSeUsuarioEstaLogado`, {
+                    method: 'GET',
+                    credentials: 'include'
+                });
+
+                const data = await response.json();
+
+                if (response.ok && data.status === 'ok') {
+                    updateOutput(`✅ Usuário logado: ${data.nome} (${data.email})`, 'success');
+                } else {
+                    updateOutput(`ℹ️ ${data.message || 'Usuário não está logado'}`, 'normal');
+                }
+            } catch (error) {
+                console.error('Erro na requisição:', error);
+                updateOutput(`❌ Erro de conexão: ${error.message}`, 'error');
+            } finally {
+                setButtonsDisabled(false);
+            }
+        }
+
+        async function deleteCookie() {
+            setButtonsDisabled(true);
+            updateOutput('🗑️ Deletando cookie…', 'loading');
+
+            try {
+                const response = await fetch(`${API_BASE}/logout`, {
+                    method: 'POST',
+                    credentials: 'include'
+                });
+
+                const data = await response.json();
+
+                if (response.ok && data.status === 'ok') {
+                    updateOutput('✅ Cookie deletado com sucesso!', 'success');
+                } else {
+                    updateOutput(`❌ Erro ao deletar cookie: ${data.message || 'Erro desconhecido'}`, 'error');
+                }
+            } catch (error) {
+                console.error('Erro na requisição:', error);
+                updateOutput(`❌ Erro de conexão: ${error.message}`, 'error');
+            } finally {
+                setButtonsDisabled(false);
+            }
+        }
+
+        // Event listeners
+        document.getElementById('save').addEventListener('click', saveCookie);
+        document.getElementById('check').addEventListener('click', checkLogin);
+        document.getElementById('delete').addEventListener('click', deleteCookie);
+
+        // Verificar servidor ao carregar a página
+        window.addEventListener('load', checkServerHealth);
+
+        // Verificar status automaticamente ao carregar
+        window.addEventListener('load', () => {
+            setTimeout(checkLogin, 500);
+        });
+    </script>
+</body>
+
+</html>
