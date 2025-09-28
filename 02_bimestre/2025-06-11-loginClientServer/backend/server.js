@@ -7,7 +7,13 @@ app.use(express.json());
 app.use(cookieParser());
 
 app.use((req, res, next) => {
-  const allowedOrigins = ['http://127.0.0.1:5500','http://127.0.0.1:5501', 'http://localhost:3000'];
+  const allowedOrigins = [
+    'http://127.0.0.1:5500',
+    'http://127.0.0.1:5501',
+    'http://localhost:5500',
+    'http://localhost:5501',
+    'http://localhost:3000'
+  ];
   const origin = req.headers.origin;
   if (allowedOrigins.includes(origin)) {
     res.header('Access-Control-Allow-Origin', origin);
@@ -24,6 +30,7 @@ const usuarios = [
 ];
 
 const checkAuth = (req, res, next) => {
+  console.log("Verificando autenticação...   checkAuth");
   if (req.cookies.logado === 'true') {
     next();
   } else {
@@ -32,6 +39,7 @@ const checkAuth = (req, res, next) => {
 };
 
 app.post('/login', (req, res) => {
+  console.log("Recebendo tentativa de login..." + JSON.stringify(req.body));
   const { email, senha } = req.body;
   const usuario = usuarios.find(u => u.email === email && u.senha === senha);
   if (usuario) {
