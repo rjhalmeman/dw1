@@ -30,7 +30,7 @@
       const email = document.getElementById('email').value;
       const senha = document.getElementById('senha').value;
 
-      const response = await fetch('http://127.0.0.1:3001/api/login', {
+      const response = await fetch('http://localhost:3001/api/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         credentials: 'include',
@@ -42,7 +42,7 @@
     }
 
     async function verificarAuth() {
-      const response = await fetch('http://127.0.0.1:3001/api/verificar-auth', {
+      const response = await fetch('http://localhost:3001/api/verificar-auth', {
         method: 'GET',
         credentials: 'include'
       });
@@ -52,7 +52,7 @@
     }
 
     async function logout() {
-      const response = await fetch('http://127.0.0.1:3001/api/logout', {
+      const response = await fetch('http://localhost:3001/api/logout', {
         method: 'POST',
         credentials: 'include'
       });

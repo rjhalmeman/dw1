@@ -1,5 +1,5 @@
 let usuarioLogado = null;
-const API_URL = 'http://127.0.0.1:3001'; // URL do servidor backend
+const API_URL = 'http://localhost:3001'; // URL do servidor backend
 
 // Inicialização
 document.addEventListener('DOMContentLoaded', function() {
@@ -53,7 +53,7 @@ async function fazerLogin(event) {
     
     try {
         const url = `${API_URL}/api/login`
-        alert(url);
+      //  alert(url);
         const response = await fetch(url, {
             method: 'POST',
             headers: {
@@ -74,7 +74,7 @@ async function fazerLogin(event) {
         }
     } catch (error) {
         console.error('Erro no login:', error);
-        mostrarErro('Erro de conexão. Tente novamente.');
+        mostrarErro('Erro de login. Tente novamente.');
     }
 }
 

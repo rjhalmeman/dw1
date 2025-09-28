@@ -24,19 +24,24 @@ app.use(express.urlencoded({ extended: true }));
 
 // Configuração do CORS
 app.use(cors({
-  origin: (origin, callback) => {
-    const allowedOrigins = [
-    //   'http://localhost:5500',
-      'http://127.0.0.1:5500'
-    ];
+    origin: (origin, callback) => {
+        const allowedOrigins = [
+            'http://localhost:5500',
+            'http://localhost:5501',
+            'http://127.0.0.1:5500',
+            'http://127.0.0.1:5501',
+            'http://localhost:3001',
+            'http://127.0.0.1:3001'
+        ];
 
-    if (!origin || allowedOrigins.includes(origin)) {
-      callback(null, true);
-    } else {
-      callback(new Error('Origem não permitida pelo CORS'));
-    }
-  },
-  credentials: true
+        if (!origin || allowedOrigins.includes(origin)) {
+            callback(null, true);
+        } else {
+
+            callback(new Error('Origem não permitida pelo CORS'));
+        }
+    },
+    credentials: true
 }));
 
 
