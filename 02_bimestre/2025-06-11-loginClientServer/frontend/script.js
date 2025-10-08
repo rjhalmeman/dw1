@@ -57,9 +57,9 @@ async function login() {
         const data = await response.json();
         if (data.success) {
             // alert(`Bem-vindo, ${data.nome}!`);
-           
-           // console.log("login bem sucedido para " + data.nome.toUpperCase());
-           
+
+            // console.log("login bem sucedido para " + data.nome.toUpperCase());
+
             setTimeout(() => {
                 const redirect = new URLSearchParams(window.location.search).get('redirect') || 'index.html';
                 // O nome do usuário pode ser armazenado temporariamente em localStorage
@@ -81,7 +81,7 @@ async function logout() {
             method: 'POST',
             credentials: 'include'
         });
-             localStorage.setItem('nomeUsuario', "");
+        localStorage.setItem('nomeUsuario', "");
         updateAuthUI(false);
         pessoaLogada = "";
         window.location.href = 'index.html';
