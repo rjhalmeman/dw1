@@ -7,8 +7,9 @@ async function checkAuth() {
             credentials: 'include'
         });
 
-       
+
         if (!response.ok) throw new Error('Não autorizado');
+        console.log("Resposta de checkAuth: " + JSON.stringify(response));
         return await response.json();
     } catch (error) {
         console.error('Erro ao verificar autenticação:', error);
@@ -39,6 +40,8 @@ function updateAuthUI(isAuthenticated) {
         loginLinks.forEach(link => link.style.display = 'inline');
         logoutLinks.forEach(link => link.style.display = 'none');
     }
+    document.getElementById('nomeLogado').style.display = 'inline';
+    document.getElementById('nomeLogado').innerHTML = `${localStorage.getItem('nomeUsuario') || ''}`;
 }
 
 async function login() {
@@ -54,8 +57,14 @@ async function login() {
         const data = await response.json();
         if (data.success) {
             // alert(`Bem-vindo, ${data.nome}!`);
+           
+           // console.log("login bem sucedido para " + data.nome.toUpperCase());
+           
             setTimeout(() => {
                 const redirect = new URLSearchParams(window.location.search).get('redirect') || 'index.html';
+                // O nome do usuário pode ser armazenado temporariamente em localStorage
+                // para ser usado na próxima página.
+                localStorage.setItem('nomeUsuario', data.nome);
                 window.location.href = redirect;
             }, 500);
         } else {
@@ -72,6 +81,7 @@ async function logout() {
             method: 'POST',
             credentials: 'include'
         });
+             localStorage.setItem('nomeUsuario', "");
         updateAuthUI(false);
         pessoaLogada = "";
         window.location.href = 'index.html';
@@ -88,7 +98,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         await protectPage();
     } else {
         const isAuthenticated = await checkAuth();
-        console.log("está autenticado? " + isAuthenticated)
-        updateAuthUI(isAuthenticated.authenticated);
+        console.log("está autenticado? " + isAuthenticated.stringify);
+        updateAuthUI(isAuthenticated.authenticated); // apenas atualiza a UI
     }
 });

@@ -30,8 +30,8 @@ const usuarios = [
 ];
 
 const checkAuth = (req, res, next) => {
-  console.log("Verificando autenticação...   checkAuth");
-  if (req.cookies.logado === 'true') {
+  console.log("Verificando autenticação...   checkAuth ... "+JSON.stringify(req.cookies));
+  if (req.cookies.logado) {
     next();
   } else {
     res.status(401).json({ authenticated: false });
