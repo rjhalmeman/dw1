@@ -1,3 +1,5 @@
+vai...
+
 Como transformar uma pasta em branch
 no terminal (prompt)
  - git checkout -b nomeDaBranch
