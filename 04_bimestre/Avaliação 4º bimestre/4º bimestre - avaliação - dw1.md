@@ -5,6 +5,8 @@ Data final para avaliação (RP): 16/12/2025
 Parte 1 (8,0 pontos) \- Fazer e apresentar projeto.
 
 **O projeto deve seguir a estrutura do modelo fornecido (no terceiro bimestre) e deve buscar dados em banco de dados via acesso direto (sem ORM).**
+https://github.com/rjhalmeman/dw1-modelo-4bim.git
+
 
 Principais funcionalidades  
 	Login com credenciais (cookies)
